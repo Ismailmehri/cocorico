@@ -2196,8 +2196,8 @@ fieldset[disabled] .btn {
 
 .btn-default {
     color: #ffffff;
-    background-color: #c6ccd2;
-    border-color: transparent;
+    background-color: #0bca00;
+    border-color: #0bca00;
 }
 
 .btn-default:hover,
@@ -2205,9 +2205,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-    color: #ffffff;
-    background-color: #afb8c0;
-    border-color: rgba(0, 0, 0, 0);
+    color: #0bca00;
+    background-color: #fff;
+    border-color: #fff;
 }
 
 .btn-default:active,
@@ -2241,9 +2241,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    color: #ffffff;
-    background-color: #58595b;
-    border-color: transparent;
+    color: #2f91fa;
+    background-color: #fff;
+    border: 1px solid #2f91fa;
 }
 
 .btn-primary:hover,
@@ -2251,9 +2251,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    color: #ffffff;
-    background-color: #444546;
-    border-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    background-color: #2f91fa;
+    border: 1px solid #2f91fa;
 }
 
 .btn-primary:active,
@@ -2939,7 +2939,7 @@ input[type="button"].btn-block {
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
-    background-color: #eeeeee;
+    background-color: #565555;
 }
 
 .nav > li.disabled > a {
@@ -2990,13 +2990,17 @@ input[type="button"].btn-block {
 
 .nav-tabs > li > a:hover {
     border-color: #c6ccd2 #c6ccd2 #eaebec;
+    color: #fff;
+    background-color: #565555;
+    border: 1px solid #eaebec;
+    border-bottom-color: transparent;
+    cursor: default;
 }
 
 .nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-    color: #58595b;
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
     border: 1px solid #eaebec;
     border-bottom-color: transparent;
     cursor: default;
@@ -5183,10 +5187,11 @@ span.btn:focus {
 
 .home-page .form-category {
     display: inline-block;
-    border-radius: 4px 4px 0 0;
-    border: 1px solid #e8e8e8;
-    background-color: rgba(246, 246, 246, 0.9);
-    padding: 14px 0 8px;
+/*     border-radius: 4px 4px 0 0;
+   border: 1px solid #e8e8e8;  */ 
+    background-color: rgba(246, 246, 246, 0.0);
+    padding: 14px 20px 8px;
+    margin-block-end: 70px;
 }
 
 .home-page .form-category .container {
@@ -5255,6 +5260,8 @@ span.btn:focus {
 .navbar-default .navbar-brand img {
     display: block;
     max-width: 100%;
+    height: 55px;
+    margin-top: -10px;
 }
 
 .navbar-default img {
@@ -5481,6 +5488,21 @@ span.btn:focus {
     position: relative;
     color: #fff;
     text-transform: uppercase;
+    background: #0bca00;
+    border: 1px solid #0bca00;
+}
+
+.jobber {
+    background: rgba(253, 107, 28, 0.5);
+}
+
+.form-category input.btn-default:hover,
+.form-category input.btn-default:focus,
+.form-category input.btn-default:active,
+.form-category input.btn-default.active {
+    color: #0bca00;
+    background: #fff;
+    border: 1px solid #0bca00;
 }
 
 .form-category .col {
@@ -5532,10 +5554,29 @@ span.btn:focus {
     padding: 0;
     width: 180px;
     height: 36px;
+    border-radius: 0px !important;
+}
+
+.border-radius-zero {
+    border-radius: 0px !important;
+}
+
+.border-radius-zero input {
+    border-radius: 0px !important;
+}
+
+.margin-zero {
+    margin-right: -10px !important;
+}
+
+.adress-padding input {
+    padding-top: 2px;
+    height: 35px;
 }
 
 .home-page .form-category .multiselect .btn-group, .home-page .form-category .multiselect .btn-default {
     width: 220px;
+    height: 45px;
 }
 
 .form-category .field-holder {
@@ -5902,12 +5943,20 @@ span.btn:focus {
 .visual h1 {
     color: #ffffff;
     margin: 0 auto;
-    max-width: 670px;
+    max-width: 700px;
     font: 700 48px/58px 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .visual h1 .thin-text {
     font-weight: 400;
+}
+
+.home-height-45 {
+    height: 45px;
+}
+
+.home-height-45 input {
+    height: 45px;
 }
 
 .visual h1 .text {
@@ -5931,6 +5980,7 @@ span.btn:focus {
 
 .infoarea .textbox {
     overflow: hidden;
+    margin-top: 22px;
 }
 
 .infoarea h2 {
@@ -7053,11 +7103,13 @@ span.btn:focus {
     font-weight: 600;
     padding: 7px 14px;
     text-transform: none;
-    background: #9a9da3;
+    background: #F4661B;
+    border: 1px solid #F4661B;
 }
 
 .reservation .btn-default:hover {
-    background: #7f838b;
+    background: #fff;
+    color: #F4661B;
 }
 
 .reservation .title {
@@ -7218,11 +7270,13 @@ span.btn:focus {
     display: block;
     padding: 4px 34px 1px;
     text-transform: none;
-    background: #c7cdd3;
+    background: #F4661B;
+    border: 1px solid #F4661B;
 }
 
 .similar-ads .btn-default:hover {
-    background: #aab4bd;
+    background: #fff;
+    color: #F4661B;
 }
 
 /* tooltip-button */
@@ -8652,7 +8706,7 @@ label {
 .nav-tabs > li > a {
     color: #ffffff;
     text-decoration: none;
-    background: #c6ccd2;
+    background: #000;
     padding: 13px 15px 10px;
 }
 
