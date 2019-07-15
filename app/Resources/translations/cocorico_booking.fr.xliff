@@ -16,7 +16,7 @@
       </trans-unit>
       <trans-unit id="c963936b54415544e2b2c4f28c4590f12c0bfa09" resname="booking.amount.help">
         <source>booking.amount.help</source>
-        <target>booking.amount.help</target>
+        <target>TVA</target>
       </trans-unit>
       <trans-unit id="a7cc6a2d75bb2bae7a95a4b8f099e8a7d9e62d8c" resname="booking.amount.total:">
         <source>booking.amount.total:</source>
@@ -139,7 +139,7 @@
       </trans-unit>
       <trans-unit id="45f4286d5f0a88a711ab63b8d7e18b9517fd9c21" resname="booking.fees.help">
         <source>booking.fees.help</source>
-        <target>booking.fees.help</target>
+        <target>Un service gratuit</target>
       </trans-unit>
       <trans-unit id="0ebee020ab091ca03d795dbe10632c32fb11f480" resname="booking.form.end">
         <source>booking.form.end</source>

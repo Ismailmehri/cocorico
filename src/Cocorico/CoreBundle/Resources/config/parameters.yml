@@ -22,35 +22,34 @@ parameters:
             - fr
     cocorico.locales_string: fr
     #Currencies
-    cocorico.currency: DT
+    cocorico.currency: TND
     cocorico.currencies_for_lexik:
-        - DT
+        - TND
     cocorico.currencies:
-        DT: DT
-        
-    cocorico.currencies_string: DT
+        TND: TND
+    cocorico.currencies_string: TND
     cocorico.currencies_json: "%kernel.root_dir%/../web/json/currencies.json"
 
     #Does VAT is included in prices fixing
     cocorico.include_vat: true
     #Does the include/exclude tax is displayed
-    cocorico.display_vat: true
+    cocorico.display_vat: false
 
     #VAT in percent
-    cocorico.vat: 0.2
+    cocorico.vat: 0.17
 
     #Does registration require email confirmation
     cocorico.registration_confirmation: false
 
     #Fees in %
-    cocorico.fee_as_asker: 0.1
-    cocorico.fee_as_offerer: 0.05
+    cocorico.fee_as_asker: 0.0
+    cocorico.fee_as_offerer: 0.0
 
     #Time unit in minute (1440 or 60)
     cocorico.time_unit: 60
 
     #Default users timezone
-    cocorico.time_zone: 'Europe/Paris'
+    cocorico.time_zone: 'Africa/Tunis'
 
     #Max search and booking days number.
     #Min 1. If set to 1 and days_display_mode = duration then only start date is displayed
@@ -93,7 +92,7 @@ parameters:
     cocorico.listing_countries: []
 
     cocorico.listing_favorite_countries:
-        - FR
+        - TN
 
     #Categories
     cocorico.listing_category_min: 1
@@ -149,7 +148,7 @@ parameters:
     #Ex : 720 -> the booking can be requested at least 12 hours before it start.
     #To use in not day mode
     #Ex: expiration_delay = 240 (4h) and acceptation_delay = 120 (2h) and min_start_time_delay = 720 (12h)
-    cocorico.booking.min_start_time_delay: 720 #MUST be >= (cocorico.booking.acceptation_delay) + 60
+    cocorico.booking.min_start_time_delay: 120 #MUST be >= (cocorico.booking.acceptation_delay) + 60
 
     #### ENVIRONMENT DEPENDANT ONLY TO FACILITATE TESTS ####
     #Booking expiration delay in minutes. MUST be greater than cocorico.booking.alert_expiration_delay
