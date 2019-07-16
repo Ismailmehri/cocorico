@@ -94,12 +94,18 @@
 }
 
 .form-area .about-info .language button[type="button"] {
-    background: none repeat scroll 0 0 #c7cdd3;
+    background: #85c954;
     font-size: 14px;
     height: 36px;
     line-height: 17px;
     padding: 0 5px;
     text-transform: none;
+    border: 1px solid  #85c954;
+}
+
+.form-area .about-info .language button[type="button"]:hover {
+    color: #85c954;
+    background: #fff;
 }
 
 .form-area .about-info .language button[type="button"] {

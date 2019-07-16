@@ -10288,7 +10288,7 @@ h1.listing-title a {
     height: 30px;
     border-radius: 30px;
     background: #ffffff;
-    border: #c6ccd2 solid 2px;
+    border: #2f91fa solid 2px;
 }
 
 .radio-holder .jcf-radio {
@@ -10308,7 +10308,7 @@ h1.listing-title a {
 
 .radio-holder .jcf-radio.jcf-checked {
     opacity: 1;
-    background: #c6ccd2;
+    background: #2f91fa;
 }
 
 .radio-holder .jcf-radio.jcf-checked span {
@@ -10626,11 +10626,14 @@ h1.listing-title a {
     font-size: 14px;
     line-height: 17px;
     text-transform: none;
-    background: #c7cdd3;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+    color: #FFF;
 }
 
 .form-area button[type=submit]:hover {
-    background: #8e9aa6;
+    background: #FFF;
+    color: #F4661B;
 }
 
 .form-area .form-block {
@@ -10816,6 +10819,15 @@ h1.listing-title a {
 
 .form-area .file-selection + .btn-block button[type="submit"] {
     margin: 0;
+    color: #fff;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+}
+
+
+.form-area .file-selection + .btn-block button[type="submit"]:hover {
+    color: #F4661B;
+    background: #FFF;
 }
 
 .form-area .features-area {
@@ -10970,8 +10982,18 @@ h1.listing-title a {
     padding: 0 0 38px;
 }
 
+
 .form-area .block2 .field-row.address + .btn-block button[type="submit"] {
     margin: 0;
+    color: #fff;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+}
+
+
+.form-area .block2 .field-row.address + .btn-block button[type="submit"]:hover {
+    color: #F4661B;
+    background: #FFF;
 }
 
 .form-area .block2 .country {
@@ -11029,6 +11051,14 @@ h1.listing-title a {
 
 .form-area .columns-holder + .btn-block button[type=submit] {
     margin: 0;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+    color: #fff;
+}
+
+.form-area .columns-holder + .btn-block button[type=submit]:hover {
+    background: #fff;
+    color: #F4661B;
 }
 
 .form-area .contact-info:before,
@@ -11142,6 +11172,14 @@ h1.listing-title a {
     float: right;
     min-width: 87px;
     margin: 0 0 0 10px;
+    color: #fff;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+}
+
+.form-area .about-info .language button[type="submit"]:hover {
+    color: #F4661B;
+    background: #FFF;
 }
 
 .form-area .about-info .language .label {
@@ -11487,6 +11525,14 @@ h1.listing-title a {
 
 .form-area #contact-info .btn-block button[type=submit] {
     margin: 0;
+    color: #fff;
+    background: #F4661B;
+    border: 1px solid #F4661B;
+}
+
+.form-area #contact-info .btn-block button[type=submit]:hover {
+    color: #F4661B;
+    background: #FFF;
 }
 
 /* btns-list */
@@ -12401,11 +12447,13 @@ h1.listing-title a {
     display: block;
     text-align: center;
     text-transform: none;
-    background: #c7cdd3;
+    background: #F4661B;
+    border: 1px solid #F4661B;
 }
 
 .postarea .posts-holder .footer .btn-default:hover {
-    background: #8e9aa6;
+    background: #fff;
+    color: #F4661B;
 }
 
 .postarea .posts-holder .footer .btn-default + .btn {
@@ -13079,22 +13127,25 @@ h1.listing-title a {
 
 .form-ad-detail .btn-primary {
     padding: 7px 23px;
-    background: #7c868d;
+    background: #fff;
     text-transform: none;
 }
 
 .form-ad-detail .btn-primary:hover {
-    background: #a5acb1;
+    background: #2f91fa;
+    color: #fff;
 }
 
 .form-ad-detail .btn-default {
     padding: 6px 30px;
     text-transform: none;
-    background: #c7cdd3;
+    background: #F4661B;
+    border: 1px solid #F4661B;
 }
 
 .form-ad-detail .btn-default:hover {
-    background: #9ca7b1;
+    background: #fff;
+    color: #F4661B;
 }
 
 /* messaging blog */
@@ -16526,6 +16577,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
     .form-area button[type="submit"] {
         margin: 0;
+        color: #fff;
+        background: #F4661B;
+        border: 1px solid #F4661B;
+    }
+    
+    .form-area button[type="submit"]:hover {
+        color: #F4661B;
+        background: #FFF;
     }
 
     .form-area .form-block {
