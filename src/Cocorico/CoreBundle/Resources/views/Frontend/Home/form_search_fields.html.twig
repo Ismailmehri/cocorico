@@ -12,36 +12,36 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="area">
-                <div class="col">
-                    <strong class="title">
+                <div class="col margin-zero">
+                    {# <strong class="title">
                         {{ form_label(form.categories) }}
-                    </strong>
+                    </strong> #}
 
                     <div class="multiselect">
                         {{ form_widget(form.categories) }}
                     </div>
                 </div>
 
-                <div class="col">
-                    <strong class="title">
+                <div class="col margin-zero ">
+                   {#  <strong class="title">
                         {{ form_label(form.location.address, null, {
                             'required': false
                         }) }}
-                    </strong>
+                    </strong> #}
 
-                    <div class="field-holder">
+                    <div class="field-holder border-radius-zero home-height-45 margin-zero">
                         {{ form_errors(form.location.address) }}
                         {{ form_widget(form.location.address, {
                             'id': 'location',
                             'attr': {
-                                'class': 'form-control',
+                                'class': 'form-control adress-padding',
                                 'placeholder': 'listing.search.form.address.placeholder'|trans
                             }
                         } ) }}
                         {{ form_rest(form.location) }}
                     </div>
                 </div>
-                <input type="submit" value="{{ 'listing.search'|trans }}" class="btn btn-default">
+                <input type="submit" value="{{ 'listing.search'|trans }}" class="btn btn-default border-radius-zero home-height-45">
             </div>
         </div>
     </div>

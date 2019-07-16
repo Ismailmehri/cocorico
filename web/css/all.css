@@ -5957,6 +5957,7 @@ span.btn:focus {
 
 .home-height-45 input {
     height: 45px;
+    padding-block-start: 1px;
 }
 
 .visual h1 .text {
