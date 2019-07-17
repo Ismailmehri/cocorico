@@ -479,7 +479,7 @@
       </trans-unit>
       <trans-unit id="c7a4298347ed905bf82c406276876396d2b49a12" resname="nav.tac.slug">
         <source>nav.tac.slug</source>
-        <target>conditions-generales-d-utilisation</target>
+        <target>conditions-generales-dutilisation</target>
       </trans-unit>
       <trans-unit id="cdf7e925f5746741c316f5fbcf39ad0dfca90775" resname="results">
         <source>results</source>

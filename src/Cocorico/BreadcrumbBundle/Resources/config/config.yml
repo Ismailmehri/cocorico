@@ -6,4 +6,4 @@ white_october_breadcrumbs:
     itemClass:          ''
     linkRel:            ''    
     translation_domain: "cocorico_breadcrumbs"
-    viewTemplate:       "WhiteOctoberBreadcrumbsBundle::breadcrumbs.html.twig"
+    viewTemplate:       "WhiteOctoberBreadcrumbsBundle::microdata.html.twig"

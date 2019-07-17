@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="ccc43ccbdcfdca4d50fd5309c511321b500c4f44" resname="booking.simulator.amount.help">
         <source>booking.simulator.amount.help</source>
-        <target>booking.simulator.amount.help</target>
+        <target>Le prix aprés simulation</target>
       </trans-unit>
       <trans-unit id="d04312144cfa558660c1b402b1f2b022d40c8de4" resname="cocorico.en">
         <source>cocorico.en</source>
@@ -523,11 +523,11 @@
       </trans-unit>
       <trans-unit id="7c020a0b11c62f4725259b4795995bc1e1e090ea" resname="listing.price_simulator.fee.help">
         <source>listing.price_simulator.fee.help</source>
-        <target>listing.price_simulator.fee.help</target>
+        <target>Service gratuit</target>
       </trans-unit>
       <trans-unit id="19e0ac6564350cc95dac17c3abde0669e0a4e448" resname="listing.price_simulator.help">
         <source>listing.price_simulator.help</source>
-        <target>Booking amount help while mouse hover 3</target>
+        <target>Vous encaisserez</target>
       </trans-unit>
       <trans-unit id="b6da107330f9826fd55158c97436c400a516d276" resname="listing.save">
         <source>listing.save</source>
@@ -867,7 +867,7 @@
       </trans-unit>
       <trans-unit id="c7a4298347ed905bf82c406276876396d2b49a12" resname="nav.tac.slug">
         <source>nav.tac.slug</source>
-        <target>conditions-generales-d-utilisation</target>
+        <target>conditions-generales-dutilisation</target>
       </trans-unit>
       <trans-unit id="fd1286353570c5703799ba76999323b7c7447b06" resname="no">
         <source>no</source>
