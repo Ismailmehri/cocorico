@@ -2207,7 +2207,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
     color: #0bca00;
     background-color: #fff;
-    border-color: #fff;
+    border-color: #0bca00;
 }
 
 .btn-default:active,
@@ -6366,7 +6366,14 @@ span.btn:focus {
     text-transform: none;
     font-size: 14px;
     line-height: 18px;
-    border-color: #c6ccd2;
+    border-color: #2f91fa;
+    background: #fff;
+}
+
+.listing-post .info-btns .btn:hover {
+    color: #fff;
+    border-color: #2f91fa;
+    background: #2f91fa;
 }
 
 .listing-post .info-btns .btn:before {
@@ -6462,27 +6469,29 @@ span.btn:focus {
 .rating {
     margin: 0;
     float: left;
-    color: #dedddd;
+    color: #fff;
+    text-shadow: -1px 0 #FFD700, 0 1px #FFD700, 1px 0 #FFD700, 0 -1px #FFD700;
 }
 
 .rating li {
     padding: 0;
-    color: #d9c26c;
+    color: #FFD700;
     font-size: 28px;
     margin: 0 -10px 0 0;
 }
 
 .rating i.icon-star {
     color: #dedddd;
+    text-shadow: -1px 0 #FFD700, 0 1px #FFD700, 1px 0 #FFD700, 0 -1px #FFD700;
 }
 
 .rating a {
-    color: #d9c26c;
+    color: #FFD700;
     text-decoration: none;
 }
 
 .rating a:hover i.icon-star {
-    color: #d9c26c;
+    color: #FFD700;
 }
 
 .rating a:before {
@@ -6491,7 +6500,7 @@ span.btn:focus {
 }
 
 .rating .active a i.icon-star {
-    color: #d9c26c;
+    color: #FFD700;
 }
 
 /* certified */
