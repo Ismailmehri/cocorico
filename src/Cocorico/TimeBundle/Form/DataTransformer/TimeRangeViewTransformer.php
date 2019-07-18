@@ -110,6 +110,10 @@ class TimeRangeViewTransformer implements DataTransformerInterface
             $viewTimezone = $this->options['timezone'];
             $date = $timeRange->getDate();
 
+            if ($date == null || $date == "") {
+                throw new TransformationFailedException("date incorrect");
+            }
+
             try {
                 foreach ($fields as $index => $field) {
                     $getter = 'get' . ucfirst($field);

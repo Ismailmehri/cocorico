@@ -873,7 +873,7 @@
       </trans-unit>
       <trans-unit id="96bc9ef12f9d3d7eef97b3510264c92b9c707d9f" resname="admin.listing.offerer.label">
         <source>admin.listing.offerer.label</source>
-        <target>Offreur</target>
+        <target>Jobber</target>
       </trans-unit>
       <trans-unit id="4f4e4c62dda7d9caa6cb75d78636b8c1483fcde8" resname="admin.listing.price.label">
         <source>admin.listing.price.label</source>
@@ -905,7 +905,7 @@
       </trans-unit>
       <trans-unit id="d9ffac21d864a1a1412d85e28f2aeea909b32564" resname="admin.listing.user.label">
         <source>admin.listing.user.label</source>
-        <target>Offreur</target>
+        <target>Jobber</target>
       </trans-unit>
       <trans-unit id="20bbb32c0561e993a306249ad494f9594e7be149" resname="admin.listing.user_email.label">
         <source>admin.listing.user_email.label</source>
