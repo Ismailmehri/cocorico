@@ -5,11 +5,11 @@ parameters:
     cocorico.phone: +216 80 216 216
     cocorico.address: Tunis, Tunisie
     cocorico.short_description: 'Trouvez le prestataire idéal pour tous les services du quotidien'
-    cocorico.contact_mail: photo.privee.2019@gmail.com
+    cocorico.contact_mail: contact@jobber.tn
     #To obfuscate see http://wbwip.com/wbw/emailencoder.html
     cocorico.contact_mail_obfuscated: "contact@jobber.tn"
-    cocorico.from_email: photo.privee.2019@gmail.com
-    cocorico.webmaster_email: photo.privee.2019@gmail.com
+    cocorico.from_email: contact@jobber.tn
+    cocorico.webmaster_email: contact@jobber.tn
     cocorico.vat_number: TN
     cocorico.home_rss_feed: 'http://jobber.tn/fr/feed/'
 
