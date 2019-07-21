@@ -173,7 +173,7 @@ class UserManager extends BaseUserManager implements UserManagerInterface
      */
     public function checkAndCreateOrUpdateUserByOAuth(UserResponseInterface $response)
     {
-        $responseArray = $response->getResponse();
+        $responseArray = $response->getData();
         if (isset($responseArray['id'])) {
             $user = null;
             /** @var UserFacebookRepository $facebookRepository */
@@ -193,7 +193,7 @@ class UserManager extends BaseUserManager implements UserManagerInterface
                     $user->setFirstName($responseArray['first_name']);
                     $user->setPassword(uniqid());
                     $user->setEnabled(true);
-                    $user->setMotherTongue(substr($responseArray['locale'], 0, 2));
+                    $user->setMotherTongue('fr');
                     if (array_key_exists('birthday', $responseArray)) {
                         $birthDate = new \DateTime($responseArray['birthday']);
                     } else {
@@ -209,7 +209,7 @@ class UserManager extends BaseUserManager implements UserManagerInterface
 //                        $user->setNationality($responseArray['hometown']['name']);
 //                    }
 
-                    $user->setEmailVerified($responseArray['verified']);
+                    $user->setEmailVerified(true);
                 }
                 // if fbUser does not exist, then add one 
                 $fbUser = new UserFacebook();
@@ -219,14 +219,14 @@ class UserManager extends BaseUserManager implements UserManagerInterface
             }
 
             $fbUser->setFacebookId($responseArray['id']);
-            $fbUser->setLink($responseArray['link']);
+            $fbUser->setLink($responseArray['picture']['data']['url']);
             $fbUser->setEmail($responseArray['email']);
             $fbUser->setLastName($responseArray['last_name']);
             $fbUser->setFirstName($responseArray['first_name']);
-            $fbUser->setVerified($responseArray['verified']);
-            $fbUser->setGender($responseArray['gender']);
-            $fbUser->setLocale($responseArray['locale']);
-            $fbUser->setTimezone($responseArray['timezone']);
+            $fbUser->setVerified(true);
+            //$fbUser->setGender($responseArray['gender']);
+            $fbUser->setLocale('fr');
+            //$fbUser->setTimezone($responseArray['timezone']);
 
             if (array_key_exists('birthday', $responseArray)) {
                 $birthDate = new \DateTime($responseArray['birthday']);
