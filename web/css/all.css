@@ -8754,7 +8754,6 @@ label {
 
 .tab-holder .column {
     position: relative;
-    padding: 0 0 0 160px;
     display: table-cell;
     vertical-align: middle;
 }
@@ -8771,7 +8770,7 @@ label {
 }
 
 .tab-holder .column:first-child {
-    padding: 0 40px 0 0;
+    padding: 0 0px 0 0;
 }
 
 .tab-holder .column:first-child:before {
@@ -15403,7 +15402,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
     .tab-holder .column:first-child,
     .form-inquiry .column:first-child {
-        padding: 0 10px 0 0;
+        padding: 0 0px 0 0;
     }
 
     .tab-holder .column:before {

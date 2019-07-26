@@ -132,7 +132,7 @@
       </trans-unit>
       <trans-unit id="6672ac1144b067af9dd189f9c831be1acf13f5b2" resname="entity.user.type.delivery">
         <source>entity.user.type.delivery</source>
-        <target state="new">Adresse de livraison</target>
+        <target state="new">Adresse de la mission </target>
       </trans-unit>
       <trans-unit id="7493734ead0bdedfe7aea277ad64272939c9c914" resname="form.address.address">
         <source>form.address.address</source>

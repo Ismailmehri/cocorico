@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="22075545a9ac9feae48656294d7a1076e3104207" resname="booking.amount_total.help">
         <source>booking.amount_total.help</source>
-        <target>booking.amount_total.help</target>
+        <target>La valuer totale.</target>
       </trans-unit>
       <trans-unit id="7d096f20914eac17da97af58a00bab3b8c28d9f9" resname="booking.bank_wire.amount.title">
         <source>booking.bank_wire.amount.title</source>

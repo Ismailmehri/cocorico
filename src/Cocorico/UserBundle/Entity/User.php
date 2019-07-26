@@ -163,7 +163,7 @@ class User extends BaseUser implements ParticipantInterface
      *
      * @ORM\Column(name="phone_prefix", type="string", length=6, nullable=true)
      */
-    protected $phonePrefix = '+33';
+    protected $phonePrefix = '+216';
 
     /**
      * @var string

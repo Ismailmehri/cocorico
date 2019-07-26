@@ -21,7 +21,7 @@
       </trans-unit>
       <trans-unit id="3af93b9b8cfe074ceff3fff27255261635f40424" resname="home.subinfo.desc1">
         <source>home.subinfo.desc1</source>
-        <target xml:space="preserve">Remplissez le formulaire et obtenez une estimation du prix et de la durée.
+        <target xml:space="preserve">Évaluer votre jobber pour informer les autres utilisateurs de la qualité de son travail.
             </target>
       </trans-unit>
       <trans-unit id="908e5b384bbeb42623be6a1743cf010dc3b48483" resname="home.subinfo.desc2">
@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="4c15d8bf2bdf8150e45e9f30b559ea8565a47042" resname="home.subinfo.title1">
         <source>home.subinfo.title1</source>
-        <target>Demandez un service</target>
+        <target>Évaluer votre jobber </target>
       </trans-unit>
       <trans-unit id="28172413ec09c98bffa9f072e9bd873932e70145" resname="home.subinfo.title2">
         <source>home.subinfo.title2</source>

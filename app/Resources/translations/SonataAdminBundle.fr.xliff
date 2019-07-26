@@ -596,7 +596,7 @@
       </trans-unit>
       <trans-unit id="248a758904788198a400d332ab8a775769d09051" resname="admin.booking.delivery_address.label">
         <source>admin.booking.delivery_address.label</source>
-        <target state="new">Adresse de livraison</target>
+        <target state="new">Adresse de la mission</target>
       </trans-unit>
       <trans-unit id="55a9fe288369ecbd05a7c628a4c76555246ea241" resname="admin.booking.delivery_amount.label">
         <source>admin.booking.delivery_amount.label</source>

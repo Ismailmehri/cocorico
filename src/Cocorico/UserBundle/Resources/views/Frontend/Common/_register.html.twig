@@ -6,6 +6,15 @@
 
     <div class="tab-holder">
         <div class="column">
+            <h3>{{ 'user.facebook.login.title'|trans }}</h3>
+            <a href="#" onclick="fb_login();" class="btn-facebook">
+                <i class="icon-facebook"></i>
+                {{ 'user.facebook.login'|trans }}
+            </a>
+
+            <div id="fb-root"></div>
+        </div>    
+        <div class="column">
             <h3>{{ 'user.signup.title'|trans }}</h3>
 
             <div class="field-row validate-row">
@@ -244,16 +253,6 @@
                     }) }}
                 </div>
             </div>
-        </div>
-
-        <div class="column">
-            <h3>{{ 'user.facebook.login.title'|trans }}</h3>
-            <a href="#" onclick="fb_login();" class="btn-facebook">
-                <i class="icon-facebook"></i>
-                {{ 'user.facebook.login'|trans }}
-            </a>
-
-            <div id="fb-root"></div>
         </div>
     </div>
 </div>
