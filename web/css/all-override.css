@@ -297,8 +297,8 @@
 
 #photos .gallery-slider .gallery-slideset .slide {
     height: 510px;
-    width: 680px;
-    display: none;
+/*     width: 680px;
+ */    display: none;
 }
 
 #photos .gallery-slider .gallery-slideset .slide:first-child {
@@ -1050,7 +1050,7 @@ li.time-fields {
 }
 
 .form-category .form-holder .col.time .time-fields #datetimepicker3 {
-    width: 72%;
+    /* width: 72%; */
     margin-left: 20px;
     position: relative;
     min-width: 103px;
@@ -2424,11 +2424,11 @@ ul.collection {
     #search-container .range-area,
     #search-container .selection-holder,
     #search-container .selection-holder > .select-holder:first-child {
-        width: auto;
+        width: auto !important;
     }
 
     .form-category .form-holder .col.time .time-fields #datetimepicker3 {
-        margin-left: 0;
+        margin-left: 15px;
     }
 
     .form-category .listing-alert {

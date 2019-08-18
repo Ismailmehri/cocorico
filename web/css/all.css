@@ -435,6 +435,8 @@ dd {
         white-space: nowrap;
     }
 
+
+
     .dl-horizontal dd {
         margin-left: 180px;
     }
@@ -5172,6 +5174,7 @@ span.btn:focus {
 #wrapper {
     overflow: hidden;
     position: relative;
+    padding: 5px;
 }
 
 /* header styles */
@@ -6254,7 +6257,7 @@ span.btn:focus {
 .listing-post .time-price {
     float: left;
     width: 70px;
-    color: #58595b;
+    color: #fff;
     line-height: 1.241;
     margin: 15px 10px 0 16px;
 }
@@ -7822,8 +7825,8 @@ label {
     border-radius: 5px;
     border: #eaebec solid 1px;
     padding: 16px 19px 19px 17px;
-    width: 48%;
-
+/*     width: 48%;
+ */
 }
 
 .form-listing-info .field-row:before,
@@ -9632,7 +9635,7 @@ h1.listing-title a {
 
 .gallery-slider .slide img,
 .gallery-slider .vertical-slide img {
-    width: 100%;
+    width: 100% !important;
     height: auto;
     vertical-align: top;
 }
@@ -15177,11 +15180,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
 /* styles for screens with width from 992px to 1024px */
 @media screen and (max-width: 1024px) {
     .home-page .form-category .multiselect .btn-group, .home-page .form-category .multiselect .btn-default {
-        width: 157px;
+        width: 120px;
     }
 
     .home-page .form-category .field-holder {
-        width: 220px;
+        width: 180px;
     }
 
     .form-category .field-holder {
@@ -15402,7 +15405,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
     .tab-holder .column:first-child,
     .form-inquiry .column:first-child {
-        padding: 0 0px 0 0;
+        padding: 0 10px 0 0;
     }
 
     .tab-holder .column:before {
