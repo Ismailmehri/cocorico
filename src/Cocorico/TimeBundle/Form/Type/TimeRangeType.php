@@ -74,7 +74,7 @@ class TimeRangeType extends AbstractType
                                 'placeholder' => '',
                                 'widget' => 'choice',
                                 'input' => 'datetime',
-                                'model_timezone' => 'UTC',
+                                'model_timezone' => 'Europe/Paris',
                                 'view_timezone' => $this->timezone,
                                 'attr' => array(
                                     'data-type' => 'start',
@@ -92,7 +92,7 @@ class TimeRangeType extends AbstractType
                                 'placeholder' => '',
                                 'widget' => 'choice',
                                 'input' => 'datetime',
-                                'model_timezone' => 'UTC',
+                                'model_timezone' => 'Europe/Paris',
                                 'view_timezone' => $this->timezone,
                                 'attr' => array(
                                     'data-type' => 'end',

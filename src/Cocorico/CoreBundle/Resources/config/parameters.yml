@@ -8,8 +8,8 @@ parameters:
     cocorico.contact_mail: contact@jobber.tn
     #To obfuscate see http://wbwip.com/wbw/emailencoder.html
     cocorico.contact_mail_obfuscated: "contact@jobber.tn"
-    cocorico.from_email: contact@jobber.tn
-    cocorico.webmaster_email: contact@jobber.tn
+    cocorico.from_email: noreply@jobber.tn
+    cocorico.webmaster_email: error@jobber.tn
     cocorico.vat_number: TN
     cocorico.home_rss_feed: 'http://jobber.tn/fr/feed/'
 
@@ -28,7 +28,7 @@ parameters:
     cocorico.currencies:
         TND: TND
     cocorico.currencies_string: TND
-    cocorico.currencies_json: "%kernel.root_dir%/../web/json/currencies.json"
+    cocorico.currencies_json: "%kernel.root_dir%/../../../jobber/app/web/json/currencies.json"
 
     #Does VAT is included in prices fixing
     cocorico.include_vat: true
@@ -49,7 +49,7 @@ parameters:
     cocorico.time_unit: 60
 
     #Default users timezone
-    cocorico.time_zone: 'Africa/Tunis'
+    cocorico.time_zone: 'Europe/Paris'
 
     #Max search and booking days number.
     #Min 1. If set to 1 and days_display_mode = duration then only start date is displayed
@@ -89,7 +89,7 @@ parameters:
     cocorico.listing_new_is_published: 1
 
     #Countries : for France and UK: - FR\n- GB. For all countries set it to []
-    cocorico.listing_countries: []
+    cocorico.listing_countries: [TN]
 
     cocorico.listing_favorite_countries:
         - TN

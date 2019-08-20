@@ -72,7 +72,7 @@ class ListingAvailabilityManager
         $status,
         $defaultPrice,
         $bookingCancellation,
-        $timezone = 'UTC'
+        $timezone = 'Europe/Paris'
     ) {
         $this->saveAvailabilities(
             $listingId,
@@ -104,7 +104,7 @@ class ListingAvailabilityManager
         array $weekDays,
         $price,
         $bookingCancellation,
-        $timezone = 'UTC'
+        $timezone = 'Europe/Paris'
     ) {
         $this->saveAvailabilities(
             $listingId,
@@ -140,7 +140,7 @@ class ListingAvailabilityManager
         $price,
         $defaultPrice = null,
         $bookingCancellation,
-        $timezone = 'UTC'
+        $timezone = 'Europe/Paris'
     ) {
 
         $daysTimeRanges = $dateTimeRange->getDaysTimeRanges($this->endDayIncluded, $weekDays, $timezone);
@@ -442,9 +442,9 @@ class ListingAvailabilityManager
 
                 //Get start and end in UTC
                 $startUTC = new \DateTime($event['start'], new \DateTimeZone($timezone));
-                $startUTC->setTimezone(new \DateTimeZone('UTC'));
+                $startUTC->setTimezone(new \DateTimeZone('Europe/Paris'));
                 $endUTC = new \DateTime($event['end'], new \DateTimeZone($timezone));
-                $endUTC->setTimezone(new \DateTimeZone('UTC'));
+                $endUTC->setTimezone(new \DateTimeZone('Europe/Paris'));
 
                 $result[] = array(
                     'id' => $event['id'],

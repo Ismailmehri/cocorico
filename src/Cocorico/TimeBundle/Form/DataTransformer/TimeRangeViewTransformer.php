@@ -21,8 +21,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class TimeRangeViewTransformer implements DataTransformerInterface
 {
     //Default timezone
-    const VIEW_TIMEZONE = 'UTC';
-    const MODEL_TIMEZONE = 'UTC';
+    const VIEW_TIMEZONE = 'Europe/Paris';
+    const MODEL_TIMEZONE = 'Europe/Paris';
 
     protected $options = array();
 

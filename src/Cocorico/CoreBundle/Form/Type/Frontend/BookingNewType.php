@@ -134,12 +134,12 @@ class BookingNewType extends AbstractType implements TranslationContainerInterfa
                     'start_options' => array(
                         'mapped' => true,
                         'data' => $booking->getStartTime(),
-                        'view_timezone' => 'UTC'
+                        'view_timezone' => 'Europe/Paris'
                     ),
                     'end_options' => array(
                         'mapped' => true,
                         'data' => $booking->getEndTime(),
-                        'view_timezone' => 'UTC'
+                        'view_timezone' => 'Europe/Paris'
                     ),
                     'required' => true,
                     /** @Ignore */

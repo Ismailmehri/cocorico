@@ -126,7 +126,7 @@ class DateTimeRange
      *
      * @return DayTimeRange[]
      */
-    public function getDaysTimeRanges($endDayIncluded, $weekDays = array(), $timezone = 'UTC')
+    public function getDaysTimeRanges($endDayIncluded, $weekDays = array(), $timezone = 'Europe/Paris')
     {
         $start = clone $this->getDateRange()->getStart();
         $start->setTime(0, 0, 0);
