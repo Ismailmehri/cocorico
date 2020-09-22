@@ -40,6 +40,7 @@ class DateRangeType extends AbstractType
         $this->timeUnit = $timeUnit;
         $this->timeUnitIsDay = $timeUnit % 1440 ? true : false;
         $this->daysMax = $daysMax;
+
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -145,7 +146,7 @@ class DateRangeType extends AbstractType
                 'allow_single_day' => true,
                 'end_day_included' => true,
                 'display_mode' => 'range',
-                'min_start_delay' => 0,
+                'min_start_time_delay' => 0,
                 'days_max' => $this->daysMax,
                 'allow_end_in_past' => false,
             )
@@ -158,7 +159,9 @@ class DateRangeType extends AbstractType
                 'transformer',
                 function (Options $options, $value) {
                     if (!$value) {
-                        $value = new DateRangeViewTransformer(new OptionsResolver());
+                        $value = new DateRangeViewTransformer(
+                            new OptionsResolver(), array('end_day_included' => $options['end_day_included'])
+                        );
                     }
 
                     return $value;
@@ -180,7 +183,7 @@ class DateRangeType extends AbstractType
                             new OptionsResolver(), array(
                                 'required' => $options["required"],
                                 'allow_single_day' => $options["allow_single_day"],
-                                'min_start_delay' => $options["min_start_delay"],
+                                'min_start_time_delay' => $options["min_start_time_delay"],
                                 'days_max' => $options["days_max"],
                                 'allow_end_in_past' => $options["allow_end_in_past"]
                             )

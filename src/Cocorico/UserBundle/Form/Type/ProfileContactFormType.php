@@ -15,6 +15,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,6 +24,16 @@ use Symfony\Component\Validator\Constraints\Valid;
 
 class ProfileContactFormType extends AbstractType
 {
+    protected $timeUnitIsDay;
+
+    /**
+     * ProfileContactFormType constructor.
+     * @param $timeUnit
+     */
+    public function __construct($timeUnit)
+    {
+        $this->timeUnitIsDay = ($timeUnit % 1440 == 0) ? true : false;
+    }
 
     /**
      * @inheritdoc
@@ -48,7 +59,7 @@ class ProfileContactFormType extends AbstractType
             )
             ->add(
                 'phone',
-                TextType::class,
+                TelType::class,
                 array(
                     'label' => 'form.user.phone',
                     'required' => false
@@ -81,15 +92,19 @@ class ProfileContactFormType extends AbstractType
                     'label' => false,
                     'required' => false,
                 )
-            )
-            ->add(
-                'timeZone',
-                TimezoneType::class,
-                array(
-                    'label' => 'form.time_zone',
-                    'required' => true,
-                )
             );
+
+        if (!$this->timeUnitIsDay) {
+            $builder
+                ->add(
+                    'timeZone',
+                    TimezoneType::class,
+                    array(
+                        'label' => 'form.time_zone',
+                        'required' => true,
+                    )
+                );
+        }
 
 
     }

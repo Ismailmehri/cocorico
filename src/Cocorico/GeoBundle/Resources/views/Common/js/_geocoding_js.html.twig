@@ -689,6 +689,7 @@
                     var tmpContent = markerTemplate.replace('%title%', marker['title']);
                     tmpContent = tmpContent.replace('%data-src%', marker['image']);
                     tmpContent = tmpContent.replace('%price%', marker['price']);
+                    tmpContent = tmpContent.replace('%duration%', marker['duration']);
                     tmpContent = tmpContent.replace('%certified%', marker['certified']);
                     tmpContent = tmpContent.replace('%url%', marker['url']);
                     tmpContent = tmpContent.replace('%category%', marker['category']);
@@ -811,10 +812,9 @@
                     if (!geoCookie) {//if no cookie IPInfoDB is called
                         $.ajax({
                             url: url,
-                            cache: true,
+                            cache: false,
                             async: true,
-//                            jsonp: "callback",// Name of the callback parameter. Commented for security reasons
-                            dataType: "json",// Tell jQuery we're expecting JSON and no more JSONP for security reasons
+                            dataType: "json",
                             success: function (location) {
                                 if (location.statusCode == 'OK') {
                                     location.countryName = countries[location.countryCode];//country name translated
