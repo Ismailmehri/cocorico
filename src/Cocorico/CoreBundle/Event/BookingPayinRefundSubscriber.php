@@ -14,8 +14,6 @@ namespace Cocorico\CoreBundle\Event;
 use Cocorico\CoreBundle\Entity\Booking;
 use Cocorico\CoreBundle\Entity\BookingPayinRefund;
 use Cocorico\CoreBundle\Model\Manager\BookingPayinRefundManager;
-use DateTime;
-use Exception;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -34,9 +32,9 @@ class BookingPayinRefundSubscriber implements EventSubscriberInterface
      * Refund booking amount to asker when it's canceled
      *
      * @param BookingPayinRefundEvent  $event
-     * @param string                   $eventName
+     * @param  string                  $eventName
      * @param EventDispatcherInterface $dispatcher
-     * @throws Exception
+     * @throws \Exception
      */
     public function onBookingRefund(BookingPayinRefundEvent $event, $eventName, EventDispatcherInterface $dispatcher)
     {
@@ -51,7 +49,7 @@ class BookingPayinRefundSubscriber implements EventSubscriberInterface
                 $payinRefund->setBooking($booking);
                 $payinRefund->setAmount($feeAndAmountToRefund["refund_amount"]);
                 $payinRefund->setUser($booking->getUser());
-                $payinRefund->setPayedAt(new DateTime());
+                $payinRefund->setPayedAt(new \DateTime());
                 $this->bookingPayinRefundManager->save($payinRefund);
                 $this->entityManager->refresh($booking);
 
@@ -66,6 +64,7 @@ class BookingPayinRefundSubscriber implements EventSubscriberInterface
         $event->setBooking($booking);
         $event->stopPropagation();
     }
+
 
     public static function getSubscribedEvents()
     {

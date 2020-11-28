@@ -68,51 +68,48 @@ function initDatepicker() {
 
 /**
  * Init timePicker fields.
- * Sync corresponding hidden hour and minute fields with current time picker value
  *
- * @param  parentTimesElt string
- * @param fields array
- * @param duration array
+ * @param parentTimesElt string
  */
-function initTimePicker(parentTimesElt, fields) {
+function initTimePicker(parentTimesElt) {
     var timePickerCompatible = true;
     if (/Edge|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         timePickerCompatible = false;
     }
-    fields = typeof fields !== 'undefined' ? fields : ['start', 'end'];
 
     $(parentTimesElt).each(function () {
         var holder = $(this);
+        //Time Pickers
+        var pickers = ['start', 'end'];
+        pickers.forEach(function (picker) {
+            var $picker = holder.find("[id$=_" + picker + "_picker]").first();
 
-        fields.forEach(function (field) {
-            var $field = holder.find("[id$=_" + field + "_picker]").first();
-
-            if ($field.length) {
-                if (!timePickerCompatible) $field.attr('type', 'text');
-                $field.prev('.add-on').find('.icon-clock').on('click', function () {
-                    $field.focus();
+            if ($picker.length) {
+                if (!timePickerCompatible) $picker.attr('type', 'text');
+                $picker.prev('.add-on').find('.icon-clock').on('click', function () {
+                    $picker.focus();
                 });
-                $field.next('.add-on').find('.icon-clock').on('click', function () {
-                    $field.focus();
+                $picker.next('.add-on').find('.icon-clock').on('click', function () {
+                    $picker.focus();
                 });
-                var $hour = holder.find("[id$=_" + field + "_hour]").first();
-                var $minute = holder.find("[id$=_" + field + "_minute]").first();
+                var $hour = holder.find("[id$=_" + picker + "_hour]").first();
+                var $minute = holder.find("[id$=_" + picker + "_minute]").first();
 
                 var defaultTime = '';
                 if ($hour.val() !== '' && $minute.val() !== '') {
                     defaultTime = moment($hour.val() + ":" + $minute.val(), 'HH:mm');
                 }
 
-                $field.datetimepicker({
+                $picker.datetimepicker({
                     format: 'HH:mm',
                     stepping: 15,
                     defaultDate: defaultTime,
                     useCurrent: false,
                     enabledHours: hoursAvailable
-                    // ,debug: true
+                    //,debug: true
                 }).on('dp.hide', function (e) {
                     var date = e.date;
-                    if (date && $field.val()) {
+                    if (date && $picker.val()) {
                         $hour.val(date.format("H"));
                         $minute.val(date.format("m")).change();
                     } else {
@@ -124,7 +121,7 @@ function initTimePicker(parentTimesElt, fields) {
                     //Lib vs 4.17.43 fix this above issue but create a new one with useCurrent :/
                     if (!$(this).data('DateTimePicker').date()) {
                         $(this).data('DateTimePicker').defaultDate(moment(hoursAvailable[0] + ":" + "0", 'HH:mm'));
-                        $field.val('');
+                        $picker.val('');
                     }
                 });
             }
@@ -214,15 +211,6 @@ function initDatePickerAjax(callbackSuccess, parentDatesElt) {
 
                 if (from.val() && to.val() && input.is(to) && !input.is(":focus")) {
                     submitDatePickerAjaxForm(callbackSuccess, parentDatesElt);
-                }
-            },
-            onClose: function () {
-                //Handle end date not manually selected in range mode
-                var input = $(this);
-                if (input.is(to) && to.attr('type') === 'text') {
-                    if (from.val() && to.val() && to.is(":focus")) {
-                        submitDatePickerAjaxForm(callbackSuccess, parentDatesElt);
-                    }
                 }
             }
         });

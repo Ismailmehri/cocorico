@@ -21,8 +21,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class TimeRangeViewTransformer implements DataTransformerInterface
 {
     //Default timezone
-    const VIEW_TIMEZONE = 'UTC';
-    const MODEL_TIMEZONE = 'UTC';
+    const VIEW_TIMEZONE = 'Europe/Paris';
+    const MODEL_TIMEZONE = 'Europe/Paris';
 
     protected $options = array();
 
@@ -110,9 +110,10 @@ class TimeRangeViewTransformer implements DataTransformerInterface
             $viewTimezone = $this->options['timezone'];
             $date = $timeRange->getDate();
 
-            if (!$date) {
-                return $timeRange;
+            if ($date == null || $date == "") {
+                throw new TransformationFailedException("date incorrect");
             }
+
             try {
                 foreach ($fields as $index => $field) {
                     $getter = 'get' . ucfirst($field);

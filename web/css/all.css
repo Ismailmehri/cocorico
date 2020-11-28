@@ -6210,6 +6210,7 @@ span.btn:focus {
     border-radius: 5px;
     background: #ffffff;
     border: #eaebec solid 1px;
+	min-height: 388px;
 }
 
 .listing-post .post-info {
@@ -6267,10 +6268,10 @@ span.btn:focus {
 }
 
 .listing-post .price {
-    display: block;
-    margin: 0 0 -3px;
-    font-size: 36px;
-    line-height: 39px;
+	display: block;
+    margin: 0 0 0px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .listing-post .favourit {
@@ -8050,7 +8051,7 @@ label {
 .price-box {
     display: inline-block;
     vertical-align: top;
-    /*width: 350px;*/
+    width: 350px;
     color: #58595b;
     border-radius: 5px;
     margin: 0 4.7% 0 3.5%;
@@ -8094,7 +8095,7 @@ label {
 
 .price-box .label {
     float: left;
-    width: 175px;
+    width: 140px;
     text-align: right;
     margin: 7px 11px 0 0;
 }
@@ -16217,11 +16218,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     }
 
     .tabset-holder .opener .icon-down-open-mini {
-        float: right;
-        width: 40px;
-        background: #ffffff;
-        border-radius: 5px;
-        border-left: 10px solid #ffffff;
+		float: right;
+		width: 40px;
+		background: #F4661B;
+		border-radius: 5px;
+		border-left: 10px solid #fff;
+		color: #fff;
     }
 
     .tabset-holder.active .nav-tabs {
@@ -17633,3 +17635,21 @@ body.loading {
 .form-control-radio > label > span {
     display: none;
 }
+
+.acticle-box {
+	border-radius: 5px;
+    background: #fff;
+    border: #eaebec solid 1px;
+	padding: 15px 20px 10px 10px;
+	min-height: 250px;
+}
+
+.acticle-box h2 {
+	padding: 0px 0px 10px 0px;
+}
+
+.acticle-container {
+	padding: 15px 10px 10px 15px;
+    height: auto;
+}
+

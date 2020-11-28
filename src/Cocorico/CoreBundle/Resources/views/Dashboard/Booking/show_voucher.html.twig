@@ -1,5 +1,4 @@
 {% embed "@CocoricoCore/Dashboard/layout_show_bill.html.twig" %}
-    {#@formatter:off#}
     {% trans_default_domain 'cocorico_booking' %}
 
     {% set listing = booking.listing %}
@@ -72,7 +71,6 @@
         <div>
             <br/>
 
-            {% if not timeUnitIsDay %}
             <div>
                 <strong>{{ 'booking.voucher.title' | trans }} : {{ translation.title }}</strong>
             </div>
@@ -83,7 +81,6 @@
                 <br/>
                 {{ translation.description|strip_private_info }}
             </div>
-            {% endif %}
         </div>
 
 

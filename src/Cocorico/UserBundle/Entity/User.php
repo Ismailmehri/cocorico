@@ -22,13 +22,11 @@ use Cocorico\UserBundle\Model\BookingDepositRefundAsOffererInterface;
 use Cocorico\UserBundle\Model\ListingAlertInterface;
 use Cocorico\UserBundle\Model\UserCardInterface;
 use Cocorico\UserBundle\Validator\Constraints as CocoricoUserAssert;
-use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\MessageBundle\Model\ParticipantInterface;
 use FOS\UserBundle\Model\User as BaseUser;
-use InvalidArgumentException;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -175,7 +173,7 @@ class User extends BaseUser implements ParticipantInterface
     protected $phone;
 
     /**
-     * @var DateTime
+     * @var \DateTime
      *
      * @ORM\Column(name="birthday", type="date")
      *
@@ -359,7 +357,7 @@ class User extends BaseUser implements ParticipantInterface
      *
      * @var string
      */
-    protected $timeZone = 'UTC';
+    protected $timeZone = 'Europe/Paris';
 
     /**
      * @ORM\OneToMany(targetEntity="Cocorico\MessageBundle\Entity\Message", mappedBy="sender", cascade={"remove"}, orphanRemoval=true)
@@ -525,7 +523,7 @@ class User extends BaseUser implements ParticipantInterface
     public function setPersonType($personType)
     {
         if (!in_array($personType, array_keys(self::$personTypeValues))) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
                 sprintf('Invalid value for user.person_type : %s.', $personType)
             );
         }
@@ -798,7 +796,7 @@ class User extends BaseUser implements ParticipantInterface
     }
 
     /**
-     * @return DateTime
+     * @return \DateTime
      */
     public function getBirthday()
     {
@@ -806,7 +804,7 @@ class User extends BaseUser implements ParticipantInterface
     }
 
     /**
-     * @param DateTime $birthday
+     * @param \DateTime $birthday
      */
     public function setBirthday($birthday)
     {
@@ -1125,7 +1123,7 @@ class User extends BaseUser implements ParticipantInterface
     /**
      * Add images.
      *
-     * @param UserImage $image
+     * @param \Cocorico\UserBundle\Entity\UserImage $image
      *
      * @return $this
      */
@@ -1140,7 +1138,7 @@ class User extends BaseUser implements ParticipantInterface
     /**
      * Remove images.
      *
-     * @param UserImage $image
+     * @param \Cocorico\UserBundle\Entity\UserImage $image
      */
     public function removeImage(UserImage $image)
     {
@@ -1160,7 +1158,7 @@ class User extends BaseUser implements ParticipantInterface
     /**
      * Add language.
      *
-     * @param UserLanguage $language
+     * @param \Cocorico\UserBundle\Entity\UserLanguage $language
      *
      * @return $this
      */
@@ -1175,7 +1173,7 @@ class User extends BaseUser implements ParticipantInterface
     /**
      * Remove language.
      *
-     * @param UserLanguage $language
+     * @param \Cocorico\UserBundle\Entity\UserLanguage $language
      */
     public function removeLanguage(UserLanguage $language)
     {

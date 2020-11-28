@@ -12,14 +12,11 @@
 namespace Cocorico\CoreBundle\Form\Type\Frontend;
 
 use Cocorico\CoreBundle\Entity\Booking;
-use Cocorico\CoreBundle\Event\BookingFormBuilderEvent;
-use Cocorico\CoreBundle\Event\BookingFormEvents;
 use Cocorico\TimeBundle\Form\Type\DateRangeType;
 use Cocorico\TimeBundle\Form\Type\TimeRangeType;
 use Cocorico\TimeBundle\Model\DateRange;
 use Cocorico\TimeBundle\Model\DateTimeRange;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use DateTime;
+use Cocorico\TimeBundle\Model\TimeRange;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
@@ -29,7 +26,6 @@ use Symfony\Component\Validator\Constraints\Valid;
 
 class BookingPriceType extends AbstractType
 {
-    protected $dispatcher;
     protected $allowSingleDay;
     protected $endDayIncluded;
     protected $daysDisplayMode;
@@ -37,7 +33,6 @@ class BookingPriceType extends AbstractType
     protected $timeUnitIsDay;
 
     /**
-     * @param EventDispatcherInterface $dispatcher
      * @param bool   $allowSingleDay
      * @param bool   $endDayIncluded
      * @param string $daysDisplayMode
@@ -45,14 +40,12 @@ class BookingPriceType extends AbstractType
      * @param int    $timeUnit
      */
     public function __construct(
-        $dispatcher,
         $allowSingleDay,
         $endDayIncluded,
         $daysDisplayMode,
         $timesDisplayMode,
         $timeUnit
     ) {
-        $this->dispatcher = $dispatcher;
         $this->allowSingleDay = $allowSingleDay;
         $this->endDayIncluded = $endDayIncluded;
         $this->daysDisplayMode = $daysDisplayMode;
@@ -116,16 +109,10 @@ class BookingPriceType extends AbstractType
                     'required' => true,
                     /** @Ignore */
                     'label' => false,
-                    'display_mode' => $this->timesDisplayMode,
+                    'display_mode' => $this->timesDisplayMode
                 )
             );
         }
-
-        //Dispatch BOOKING_PRICE_FORM_BUILD Event. Listener listening this event can add fields and validation
-        $this->dispatcher->dispatch(
-            BookingFormEvents::BOOKING_PRICE_FORM_BUILD,
-            new BookingFormBuilderEvent($builder)
-        );
 
         //Sync date and time
         $builder->addEventListener(
@@ -134,13 +121,12 @@ class BookingPriceType extends AbstractType
                 /** @var Booking $booking */
                 $booking = $event->getData();
                 $form = $event->getForm();
-
                 /** @var DateRange $dateRange */
                 $dateRange = clone $form->get('date_range')->getData();
                 $booking->setStart($dateRange->getStart());
                 $booking->setEnd($dateRange->getEnd());
-                $booking->setStartTime(new DateTime('1970-01-01 00:00'));
-                $booking->setEndTime(new DateTime('1970-01-01 00:00'));
+                $booking->setStartTime(new \DateTime('1970-01-01 00:00'));
+                $booking->setEndTime(new \DateTime('1970-01-01 00:00'));
 
                 if (!$this->timeUnitIsDay) {
                     //Sync booking date and time from date and time range
@@ -167,6 +153,11 @@ class BookingPriceType extends AbstractType
                 'translation_domain' => 'cocorico_booking',
                 'constraints' => new Valid(),
                 'validation_groups' => array('new'),
+//                'error_bubbling' => false,//To prevent errors bubbling up to the parent form
+//                //To map errors of all unmapped properties (date_range) to a particular field (date_range)
+//                'error_mapping' => array(
+//                    '.' => 'date_range',
+//                ),
             )
         );
     }

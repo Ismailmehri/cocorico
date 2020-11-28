@@ -13,4 +13,4 @@ Disallow: /fr/login-check
 Disallow: /en/login-check
 Disallow: /fr/tableau-de-bord/message/*
 Disallow: /en/dashboard/message/*
-Sitemap: https://cocorico.dev/sitemap.xml
+Sitemap: https://jobber.tn/sitemap.xml

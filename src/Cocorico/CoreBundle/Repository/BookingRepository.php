@@ -12,20 +12,16 @@
 namespace Cocorico\CoreBundle\Repository;
 
 use Cocorico\CoreBundle\Entity\Booking;
-use DateInterval;
-use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
-use Doctrine\ORM\QueryBuilder;
-use Exception;
 
 
 class BookingRepository extends EntityRepository
 {
     /**
      *
-     * @return QueryBuilder
+     * @return \Doctrine\ORM\QueryBuilder
      */
     public function getFindQueryBuilder()
     {
@@ -49,7 +45,7 @@ class BookingRepository extends EntityRepository
      * @param string $locale
      * @param array  $status
      *
-     * @return QueryBuilder
+     * @return \Doctrine\ORM\QueryBuilder
      */
     public function getFindByAskerQuery($askerId, $locale, $status = array())
     {
@@ -91,7 +87,7 @@ class BookingRepository extends EntityRepository
      * @param string $locale
      * @param array  $status
      *
-     * @return QueryBuilder
+     * @return \Doctrine\ORM\QueryBuilder
      */
     public function getFindOneByAskerQuery($id, $askerId, $locale, $status = array())
     {
@@ -109,7 +105,7 @@ class BookingRepository extends EntityRepository
      * @param string $locale
      * @param array  $status
      *
-     * @return QueryBuilder
+     * @return \Doctrine\ORM\QueryBuilder
      */
     public function getFindByOffererQuery($offererId, $locale, $status = array())
     {
@@ -139,7 +135,7 @@ class BookingRepository extends EntityRepository
      * @param string $locale
      * @param array  $status
      *
-     * @return QueryBuilder
+     * @return \Doctrine\ORM\QueryBuilder
      */
     public function getFindByListingQuery($listingId, $locale, $status = array())
     {
@@ -178,10 +174,10 @@ class BookingRepository extends EntityRepository
     }
 
     /**
-     * @param int      $listingId
-     * @param string   $locale
-     * @param array    $status
-     * @param DateTime $createdAt
+     * @param int       $listingId
+     * @param string    $locale
+     * @param array     $status
+     * @param \DateTime $createdAt
      *
      * @return array
      */
@@ -189,7 +185,7 @@ class BookingRepository extends EntityRepository
         $listingId,
         $locale,
         $status = array(),
-        DateTime $createdAt
+        \DateTime $createdAt
     ) {
         $queryBuilder = $this->getFindByListingQuery($listingId, $locale, $status);
 
@@ -281,19 +277,18 @@ class BookingRepository extends EntityRepository
      * @param int $expirationDelay      Delay in minutes to consider a booking as expiring.
      * @param int $acceptationDelay     Delay in minutes to consider a booking as expiring for acceptation.
      *
-     * @return ArrayCollection
+     * @return \Doctrine\Common\Collections\ArrayCollection
      */
     public function findBookingsExpiringToAlert(
         $expirationAlertDelay,
         $expirationDelay,
         $acceptationDelay
-    )
-    {
-        $dateExpiring = new DateTime();
-        $dateExpiring->sub(new DateInterval('PT'.($expirationDelay - $expirationAlertDelay).'M'));
+    ) {
+        $dateExpiring = new \DateTime();
+        $dateExpiring->sub(new \DateInterval('PT' . ($expirationDelay - $expirationAlertDelay) . 'M'));
 
-        $dateAcceptationExpiring = new DateTime('now');
-        $dateAcceptationExpiring->add(new DateInterval('PT'.($acceptationDelay + $expirationAlertDelay).'M'));
+        $dateAcceptationExpiring = new \DateTime('now');
+        $dateAcceptationExpiring->add(new \DateInterval('PT' . ($acceptationDelay + $expirationAlertDelay) . 'M'));
 
         $sql = <<<SQLQUERY
             (
@@ -325,13 +320,13 @@ SQLQUERY;
      * Find imminent Bookings to alert
      *
      * @param int $bookingImminentDelay Delay in minutes to consider a booking as imminent.
-     * @return ArrayCollection
+     * @return \Doctrine\Common\Collections\ArrayCollection
      */
     public function findBookingsImminentToAlert($bookingImminentDelay)
     {
         //Imminent date
-        $dateImminent = new DateTime('now');
-        $dateImminent->add(new DateInterval('PT'.$bookingImminentDelay.'M'));
+        $dateImminent = new \DateTime('now');
+        $dateImminent->add(new \DateInterval('PT' . $bookingImminentDelay . 'M'));
 
         $sql = <<<SQLQUERY
             (
@@ -367,17 +362,17 @@ SQLQUERY;
      * @param int $expirationDelay  Delay in minutes to consider a booking as expired.
      * @param int $acceptationDelay Delay in minutes to consider a booking as expired for acceptation.
      *
-     * @return ArrayCollection
+     * @return \Doctrine\Common\Collections\ArrayCollection
      */
     public function findBookingsToExpire($expirationDelay, $acceptationDelay)
     {
-        $today = new DateTime('now');
+        $today = new \DateTime('now');
 
-        $dateExpired = new DateTime();
-        $dateExpired->sub(new DateInterval('PT'.$expirationDelay.'M'));
+        $dateExpired = new \DateTime();
+        $dateExpired->sub(new \DateInterval('PT' . $expirationDelay . 'M'));
 
-        $dateAcceptationExpired = new DateTime('now');
-        $dateAcceptationExpired->add(new DateInterval('PT'.$acceptationDelay.'M'));
+        $dateAcceptationExpired = new \DateTime('now');
+        $dateAcceptationExpired->add(new \DateInterval('PT' . $acceptationDelay . 'M'));
 
         $sql = <<<SQLQUERY
             (
@@ -421,7 +416,7 @@ SQLQUERY;
      * @param bool    $endDayIncluded
      * @param bool    $timeUnitIsDay
      *
-     * @return ArrayCollection|Booking[]
+     * @return \Doctrine\Common\Collections\ArrayCollection|Booking[]
      */
     public function findBookingsToRefuse($bookingAccepted, $endDayIncluded, $timeUnitIsDay)
     {
@@ -463,14 +458,14 @@ SQLQUERY;
      *                                after booking start date or booking end date.
      * @param int    $validatedDelay  Time after or before the moment the booking is considered as validated (in minutes)
      *
-     * @return ArrayCollection|Booking[]
+     * @return \Doctrine\Common\Collections\ArrayCollection|Booking[]
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function findBookingsToValidate($validatedMoment, $validatedDelay)
     {
         if ($validatedMoment != 'start' && $validatedMoment != 'end') {
-            throw new Exception('Wrong argument $validatedMoment in findBookingsToValidate function');
+            throw new \Exception('Wrong argument $validatedMoment in findBookingsToValidate function');
         }
 
         $queryBuilder = $this->getFindQueryBuilder();
@@ -485,11 +480,11 @@ SQLQUERY;
             )
             ->setParameter('validated', false);
 
-        $dateValidation = new DateTime('now');
+        $dateValidation = new \DateTime('now');
         if ($validatedDelay >= 0) {//after moment
-            $dateValidation->sub(new DateInterval('PT'.$validatedDelay.'M'));
+            $dateValidation->sub(new \DateInterval('PT' . $validatedDelay . 'M'));
         } else {//before moment
-            $dateValidation->add(new DateInterval('PT'.abs($validatedDelay).'M'));
+            $dateValidation->add(new \DateInterval('PT' . abs($validatedDelay) . 'M'));
         }
 
         $sql = <<<SQLQUERY
@@ -506,28 +501,6 @@ SQLQUERY;
 //        print_r($queryBuilder->getQuery()->getParameters()->toArray());
 //die();
         return new ArrayCollection($queryBuilder->getQuery()->getResult());
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastInvoiceNumber()
-    {
-        $qbInvoices = $this->createQueryBuilder('b');
-        $qbRefunds = clone $qbInvoices;
-
-        $qbInvoices->select('b.invoiceNumber')
-            ->orderBy('b.invoiceNumber', 'DESC')
-            ->setMaxResults(1);
-
-        $qbRefunds->select('b.refundInvoiceNumber')
-            ->orderBy('b.refundInvoiceNumber', 'DESC')
-            ->setMaxResults(1);
-
-        $lastInvoiceNumber = $qbInvoices->getQuery()->getSingleScalarResult();
-        $lastRefundNumber = $qbRefunds->getQuery()->getSingleScalarResult();
-
-        return max($lastInvoiceNumber, $lastRefundNumber);
     }
 
 }

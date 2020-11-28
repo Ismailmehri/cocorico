@@ -1,52 +1,63 @@
 imports:
     - { resource: config.yml }
-    - { resource: "@CocoricoCoreBundle/Resources/config/config_dev.yml"}
 
-#doctrine:
-#    orm:
-#        metadata_cache_driver: apc
-#        query_cache_driver: apc
-#        result_cache_driver: apc
+#framework:
+#    validation:
+#        cache: validator.mapping.cache.doctrine.apc
+#    serializer:
+#        cache: serializer.mapping.cache.doctrine.apc
 
-framework:
-    router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
-        strict_requirements: true
-    profiler: { only_exceptions: false }
-    ide: 'phpstorm'
-
-web_profiler:
-    toolbar: true
-    intercept_redirects: false
+doctrine:
+    orm:
+        metadata_cache_driver: apc
+        query_cache_driver: apc
+        result_cache_driver: apc
 
 monolog:
     handlers:
         main:
-#            type:   stream
-            type:   rotating_file
-            path:   "%kernel.logs_dir%/%kernel.environment%.log"
-            level:  debug
-            channels: ["!event"]
+            type:               fingers_crossed
+            action_level:       critical
+            handler:            grouped
+        grouped:
+            type:               group
+            members:            [rotated, swift]
+#            members:            [streamed, swift]
+        rotated:
+            type:               rotating_file
+            path:               "%kernel.logs_dir%/%kernel.environment%.log"
+            level:              debug
+#        streamed:
+#            type:               stream
+#            path:               "%kernel.logs_dir%/%kernel.environment%.log"
+#            level:              debug
+        swift:
+            type:               swift_mailer
+            from_email:         "%cocorico.from_email%"
+            to_email:           "%cocorico.webmaster_email%"
+            subject:            "An error occured on %cocorico.site_name%"
+            level:              debug
+        login:
+            type:               stream
+            path:               "%kernel.logs_dir%/auth.log"
+            level:              info
+            channels:           security
+
+#        main:
+#            type:         fingers_crossed
+#            action_level: error
+#            handler:      nested
+#        nested:
+#            type:  stream
+#            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+#            level: debug
+#            channels: [!mangopay]
         console:
-            type:   console
-            channels: ["!event", "!doctrine"]
-        #swift:
-        #    type:               swift_mailer
-        #    from_email:         "%cocorico.from_email%"
-        #    to_email:           "%cocorico.webmaster_email%"
-        #    subject:            "An error occured on %cocorico.site_name%"
-        #    level:              debug
-        # uncomment to get logging in your browser
-        # you may have to allow bigger header sizes in your Web server configuration
-        #firephp:
-        #    type:   firephp
-        #    level:  info
-        #chromephp:
-        #    type:   chromephp
-        #    level:  info
+            type:  console
+
 
 swiftmailer:
 #    delivery_address: me@example.com
     spool:
         type: file
-        path: "%kernel.root_dir%/../var/spool"
+        path: '%kernel.project_dir%/var/spool'

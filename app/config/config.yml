@@ -34,7 +34,7 @@ framework:
         handler_id:  ~
         name: _csess
         #on debian there is a /etc/cron.d/php5 doing the job
-        gc_probability: null
+        gc_probability: 0 #todo check in prod
     fragments:       ~
     http_method_override: true
 
@@ -98,9 +98,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     port:      "%mailer_port%"
-    spool:     { type: memory }
     encryption: ssl
     auth_mode:  login
+    #spool:
+        #type: file
+        #path: '%kernel.project_dir%/var/spool'
 
 
 doctrine_migrations:

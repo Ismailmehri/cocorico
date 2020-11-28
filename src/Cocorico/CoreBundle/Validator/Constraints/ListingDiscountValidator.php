@@ -35,8 +35,8 @@ class ListingDiscountValidator extends ConstraintValidator
      */
     public function validate($listingDiscount, Constraint $constraint)
     {
-        /** @var \Cocorico\CoreBundle\Entity\ListingDiscount $listingDiscount */
-        /** @var \Cocorico\CoreBundle\Validator\Constraints\ListingDiscount $constraint */
+        /** @var $listingDiscount \Cocorico\CoreBundle\Entity\ListingDiscount */
+        /** @var $constraint \Cocorico\CoreBundle\Validator\Constraints\ListingDiscount */
 
         //Discount
         if ($listingDiscount->getDiscount() < $this->minDiscount) {

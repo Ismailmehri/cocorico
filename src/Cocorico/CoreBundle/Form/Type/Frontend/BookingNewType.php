@@ -17,9 +17,6 @@ use Cocorico\CoreBundle\Event\BookingFormEvents;
 use Cocorico\CoreBundle\Model\Manager\BookingManager;
 use Cocorico\TimeBundle\Form\Type\DateRangeType;
 use Cocorico\TimeBundle\Form\Type\TimeRangeType;
-use DateInterval;
-use DateTime;
-use DateTimeZone;
 use JMS\TranslationBundle\Model\Message;
 use JMS\TranslationBundle\Translation\TranslationContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -49,10 +46,10 @@ class BookingNewType extends AbstractType implements TranslationContainerInterfa
 
     private $bookingManager;
     private $dispatcher;
-    private $allowSingleDay;
-    private $endDayIncluded;
-    private $minStartTimeDelay;
-    private $acceptationDelay;
+    protected $allowSingleDay;
+    protected $endDayIncluded;
+    protected $minStartDelay;
+    protected $minStartTimeDelay;
     private $currency;
     private $currencySymbol;
     private $addressDelivery;
@@ -73,8 +70,8 @@ class BookingNewType extends AbstractType implements TranslationContainerInterfa
         $parameters = $parameters["parameters"];
         $this->allowSingleDay = $parameters['cocorico_booking_allow_single_day'];
         $this->endDayIncluded = $parameters['cocorico_booking_end_day_included'];
+        $this->minStartDelay = $parameters['cocorico_booking_min_start_delay'];
         $this->minStartTimeDelay = $parameters['cocorico_booking_min_start_time_delay'];
-        $this->acceptationDelay = $parameters['cocorico_booking_acceptation_delay'];
         $this->currency = $parameters['cocorico_currency'];
         $this->currencySymbol = Intl::getCurrencyBundle()->getCurrencySymbol($this->currency);
         $this->addressDelivery = $parameters['cocorico_user_address_delivery'];
@@ -240,11 +237,10 @@ class BookingNewType extends AbstractType implements TranslationContainerInterfa
             foreach ($keys as $key) {
                 unset($errors[$key]);
             }
-            $minStart = new DateTime();
-            $minStart->setTimezone(new DateTimeZone($timezone));
-            if ($this->minStartTimeDelay > 0) {
-                $minStart->add(new DateInterval('PT'.$this->minStartTimeDelay.'M'));
-                $minStart->setTime(0, 0, 0);
+            $minStart = new \DateTime();
+            $minStart->setTimezone(new \DateTimeZone($timezone));
+            if ($this->minStartDelay > 0) {
+                $minStart->add(new \DateInterval('P' . $this->minStartDelay . 'D'));
             }
             $form['date_range']->addError(
                 new FormError(
@@ -257,35 +253,15 @@ class BookingNewType extends AbstractType implements TranslationContainerInterfa
             );
         }
 
-        $keys = array_keys($errors, 'date_range.invalid.acceptation');
-        if (count($keys)) {
-            foreach ($keys as $key) {
-                unset($errors[$key]);
-            }
-            $maxAcceptableDate = new DateTime();
-            $maxAcceptableDate->setTimezone(new DateTimeZone($timezone));
-            $maxAcceptableDate->add(new DateInterval('PT'.$this->acceptationDelay.'M'));
-            $maxAcceptableDate->add(new DateInterval('P1D'));
-            $form['date_range']->addError(
-                new FormError(
-                    'date_range.invalid.min_start {{ min_start_day }}',
-                    'cocorico',
-                    array(
-                        '{{ min_start_day }}' => $maxAcceptableDate->format('d/m/Y'),
-                    )
-                )
-            );
-        }
-
         $keys = array_keys($errors, 'time_range.invalid.min_start');
         if (count($keys)) {
             foreach ($keys as $key) {
                 unset($errors[$key]);
             }
-            $minStart = new DateTime();
-            $minStart->setTimezone(new DateTimeZone($timezone));
+            $minStart = new \DateTime();
+            $minStart->setTimezone(new \DateTimeZone($timezone));
             if ($this->minStartTimeDelay > 0) {
-                $minStart->add(new DateInterval('PT'.$this->minStartTimeDelay.'M'));
+                $minStart->add(new \DateInterval('PT' . $this->minStartTimeDelay . 'M'));
             }
             $form['date_range']->addError(
                 new FormError(

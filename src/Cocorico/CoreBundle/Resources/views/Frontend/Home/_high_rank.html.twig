@@ -45,8 +45,7 @@
                                                             <!-- rating -->
                                                             {% if listing.averageRating %}
                                                                 {{ listing.averageRating | cocorico_star_rating }}
-                                                                <span class="home-comment-counter">({{ listing.commentCount }}
-                                                                    )</span>
+                                                                <span class="home-comment-counter">({{ listing.commentCount }})</span>
                                                             {% endif %}
                                                             {% if  listing.certified %}
                                                                 <span class="certified">
@@ -76,12 +75,6 @@
 
                                                 <p>{{ listing_location.city }} </p>
                                             </div>
-
-                                            {% if bundleExist('CocoricoListingSessionBundle') and not app.request.xmlHttpRequest %}
-                                                {% include 'CocoricoListingSessionBundle:Frontend:ListingResult/_show_duration.html.twig' with {
-                                                    'duration': listing.duration
-                                                } only %}
-                                            {% endif %}
                                         </div>
                                     </div>
                                 </a>
@@ -99,4 +92,34 @@
             <div class="slider-secondary-paging"></div>
         </div>
     </div>
+</section>
+<section class="tips-section">
+  <div class="listing-holder infoarea row">
+	  <div class="col-xs-12 col-sm-6 col-md-6 info-box acticle-container">
+		<div class="acticle-box">
+		  <h2 class="high-rank-title">Vous cherchez un offre d’emploi en Tunisie ?</h2>
+		  <p> Vous êtes à la recherche d’<b>offres d’emploi</b> pour compléter vos revenus ? Vous avez besoin d’aide pour de petits travaux de <b>bricolage, ménage, jardinage ou même déménagement</b> ? Inscrivez-vous sur <a href="https://jobber.tn/fr/inscription">jobber.tn</a>, plateforme collaborative pionnière du jobbing en Tunisie !</p>
+		 <p> Sur notre site de jobbing, vous pouvez <b>publier une annonce</b> de particulier et consulter les annonces de nos jobbers depuis leurs profils : compétences, expérience, notation et avis de notre communauté y figurent, pour vous assurer des prestations de qualité, en toute confiance</p>
+		</div>
+	  </div>
+	  <div class="col-xs-12 col-sm-6 col-md-6 info-box acticle-container">
+		<div class="acticle-box">
+		  <h2 class="high-rank-title">Les différents jobbings que vous pouvez faire</h2>
+		 <p> La variété <b>des missions</b> en jobbing permet à tout le monde de trouver son bonheur. Les personnes recherchent des jobbeurs pour tout type de prestations :</p>
+		  <p>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=9&categories%5B%5D=10&categories%5B%5D=11&categories%5B%5D=12&categories%5B%5D=13&categories%5B%5D=14&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&page=1">photographe,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=9&categories%5B%5D=10&categories%5B%5D=11&categories%5B%5D=12&categories%5B%5D=13&categories%5B%5D=14&categories%5B%5D=16&categories%5B%5D=17&categories%5B%5D=18&categories%5B%5D=19&categories%5B%5D=20&categories%5B%5D=21&categories%5B%5D=22&categories%5B%5D=23&categories%5B%5D=24&categories%5B%5D=25&categories%5B%5D=26&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&page=1">coching,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=28&categories%5B%5D=29&categories%5B%5D=30&categories%5B%5D=31&categories%5B%5D=32&categories%5B%5D=61&categories%5B%5D=62&categories%5B%5D=33&categories%5B%5D=34&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&page=1">bricolage,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=36&categories%5B%5D=37&categories%5B%5D=38&categories%5B%5D=39&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&date_range%5Bstart%5D=&date_range%5Bend%5D=&date_range%5Bnb_days%5D=&time_range%5Bstart_picker%5D=&time_range%5Bstart%5D%5Bhour%5D=&time_range%5Bstart%5D%5Bminute%5D=&time_range%5Bnb_minutes%5D=&time_range%5Bend%5D%5Bhour%5D=&time_range%5Bend%5D%5Bminute%5D=&price_range%5Bmin%5D=1&price_range%5Bmax%5D=100&characteristics%5B1%5D=&characteristics%5B3%5D=&characteristics%5B2%5D=&sort_by=&page=1">Nettoyage / Repassage,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=41&categories%5B%5D=42&categories%5B%5D=43&categories%5B%5D=44&categories%5B%5D=45&categories%5B%5D=46&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&date_range%5Bstart%5D=&date_range%5Bend%5D=&date_range%5Bnb_days%5D=&time_range%5Bstart_picker%5D=&time_range%5Bstart%5D%5Bhour%5D=&time_range%5Bstart%5D%5Bminute%5D=&time_range%5Bnb_minutes%5D=&time_range%5Bend%5D%5Bhour%5D=&time_range%5Bend%5D%5Bminute%5D=&price_range%5Bmin%5D=1&price_range%5Bmax%5D=100&characteristics%5B1%5D=&characteristics%5B3%5D=&characteristics%5B2%5D=&sort_by=&page=1">Événementiel,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=48&categories%5B%5D=49&categories%5B%5D=50&categories%5B%5D=51&categories%5B%5D=52&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&date_range%5Bstart%5D=&date_range%5Bend%5D=&date_range%5Bnb_days%5D=&time_range%5Bstart_picker%5D=&time_range%5Bstart%5D%5Bhour%5D=&time_range%5Bstart%5D%5Bminute%5D=&time_range%5Bnb_minutes%5D=&time_range%5Bend%5D%5Bhour%5D=&time_range%5Bend%5D%5Bminute%5D=&price_range%5Bmin%5D=1&price_range%5Bmax%5D=100&characteristics%5B1%5D=&characteristics%5B3%5D=&characteristics%5B2%5D=&sort_by=&page=1">Cours et Formations,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=54&categories%5B%5D=55&categories%5B%5D=56&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&date_range%5Bstart%5D=&date_range%5Bend%5D=&date_range%5Bnb_days%5D=&time_range%5Bstart_picker%5D=&time_range%5Bstart%5D%5Bhour%5D=&time_range%5Bstart%5D%5Bminute%5D=&time_range%5Bnb_minutes%5D=&time_range%5Bend%5D%5Bhour%5D=&time_range%5Bend%5D%5Bminute%5D=&price_range%5Bmin%5D=1&price_range%5Bmax%5D=100&characteristics%5B1%5D=&characteristics%5B3%5D=&characteristics%5B2%5D=&sort_by=&page=1">Informatique,</a>
+		  <a href="https://jobber.tn/fr/annonce/resultat-recherche?categories%5B%5D=58&categories%5B%5D=59&categories%5B%5D=60&categories%5B%5D=63&location%5Baddress%5D=Tunisie&location%5Blat%5D=33.886917&location%5Blng%5D=9.537499&location%5Bviewport%5D=%28%2830.2280339%2C+7.522311%29%2C+%2837.5359%2C+11.599217%29%29&location%5Bcountry%5D=TN&location%5Barea%5D=&location%5Bdepartment%5D=&location%5Bcity%5D=&location%5Bzip%5D=&location%5Broute%5D=&location%5BstreetNumber%5D=&location%5BaddressType%5D=country%2Cpolitical&date_range%5Bstart%5D=&date_range%5Bend%5D=&date_range%5Bnb_days%5D=&time_range%5Bstart_picker%5D=&time_range%5Bstart%5D%5Bhour%5D=&time_range%5Bstart%5D%5Bminute%5D=&time_range%5Bnb_minutes%5D=&time_range%5Bend%5D%5Bhour%5D=&time_range%5Bend%5D%5Bminute%5D=&price_range%5Bmin%5D=1&price_range%5Bmax%5D=100&characteristics%5B1%5D=&characteristics%5B3%5D=&characteristics%5B2%5D=&sort_by=&page=1">Esthétique</a>      
+		</p>
+		<p>
+		Ce qui est intéressant, c’est que tout le monde peut devenir jobbeur, que vous soyez au chômage, étudiant, retraité, mère au foyer, etc.
+		</p>
+		</div>
+	  </div>
+  </div>
 </section>

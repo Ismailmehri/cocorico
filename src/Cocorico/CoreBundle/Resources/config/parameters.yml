@@ -1,10 +1,11 @@
 parameters:
     #### Environment independent parameters. Same values in dev, staging, prod environments  ####
     #Site general info
-    cocorico.site_name: Jobber
+    cocorico.site_name: Jobber - site de jobbing et de services entre particuliers
     cocorico.phone: +216 80 216 216
     cocorico.address: Tunis, Tunisie
-    cocorico.short_description: 'Trouvez le prestataire idéal pour tous les services du quotidien'
+    cocorico.short_description: 'Trouvez le prestataire idéal pour tous les services du quotidien : Bricolage, Déménagement, Nettoyage, électricien à domicile, Coach prive, Massage a domicile, Cours particuliers.'
+    cocorico.seo_words: électricien à domicile, coach prive tunisie, massage a domicile tunis, photographe mariage, cours particuliers, femme de menage tunisie prix, esthéticienne à domicile
     cocorico.contact_mail: contact@jobber.tn
     #To obfuscate see http://wbwip.com/wbw/emailencoder.html
     cocorico.contact_mail_obfuscated: "contact@jobber.tn"
@@ -70,7 +71,7 @@ parameters:
 
     #Used for display calendar :
     #Unavailability is for all day or overlaps two consecutives days.
-    cocorico.time_unit_allday: true  #boolean
+    cocorico.time_unit_allday: false  #boolean
 
     #Max search, booking time unit number.
     #Min 1. Max value of times max depends on time unit: 24 if time unit is hour. Not needed if time unit is day.
@@ -86,7 +87,7 @@ parameters:
     cocorico.review_max_per_page: 10
 
     #Is new listing published by default (0 or 1)
-    cocorico.listing_new_is_published: 1
+    cocorico.listing_new_is_published: 0
 
     #Countries : for France and UK: - FR\n- GB. For all countries set it to []
     cocorico.listing_countries: [TN]
@@ -103,7 +104,7 @@ parameters:
     #Min listing price in euro cents
     cocorico.listing_price_min: 100
     #Max listing price in euro cents
-    cocorico.listing_price_max: 100000
+    cocorico.listing_price_max: 10000
 
     #Add marker on listing show page if true or zone if false
     cocorico.listing_map_display_marker: false
@@ -341,7 +342,7 @@ parameters:
 
     #SMS
     cocorico_sms.enabled:                false
-    cocorico_sms.phone_check:            false
+    cocorico_sms.phone_check:            true
     cocorico_sms.thread_notification:    false
     cocorico_sms.ovh_endpoint_name:      "ovh-eu"
     cocorico_sms.ovh_application_key:    ~

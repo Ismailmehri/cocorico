@@ -15,17 +15,12 @@ use Cocorico\CoreBundle\Document\ListingAvailability;
 use Cocorico\CoreBundle\Entity\Listing;
 use Cocorico\CoreBundle\Form\Type\Dashboard\ListingEditAvailabilitiesPricesType;
 use Cocorico\CoreBundle\Form\Type\Dashboard\ListingEditAvailabilityPriceType;
-use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Form;
-use Symfony\Component\Form\FormInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Listing Dashboard controller.
@@ -50,7 +45,7 @@ class ListingAvailabilityPriceController extends Controller
      * @param Request $request
      * @param         $listing
      *
-     * @return RedirectResponse|Response
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function editAvailabilitiesPricesAction(Request $request, Listing $listing)
     {
@@ -79,7 +74,7 @@ class ListingAvailabilityPriceController extends Controller
             'CocoricoCoreBundle:Dashboard/Listing:edit_availabilities_prices.html.twig',
             array(
                 'listing' => $listing,
-                'form' => $form->createView()
+                'form_prices' => $form->createView()
             )
         );
 
@@ -90,7 +85,7 @@ class ListingAvailabilityPriceController extends Controller
      *
      * @param Listing $listing The entity
      *
-     * @return Form The form
+     * @return \Symfony\Component\Form\Form The form
      */
     private function createEditAvailabilitiesPricesForm(Listing $listing)
     {
@@ -136,7 +131,7 @@ class ListingAvailabilityPriceController extends Controller
      * @param  string  $start_time
      * @param  string  $end_time
      *
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function editAvailabilityPriceAction(
         Request $request,
@@ -176,7 +171,7 @@ class ListingAvailabilityPriceController extends Controller
      * @param  string $startTime
      * @param  string $endTime
      *
-     * @return Form|FormInterface
+     * @return \Symfony\Component\Form\Form|\Symfony\Component\Form\FormInterface
      */
     private function createEditAvailabilityPriceForm($listingId, $day, $startTime, $endTime)
     {
@@ -220,20 +215,22 @@ class ListingAvailabilityPriceController extends Controller
      * @param  Listing $listing
      * @param  string  $day format yyyy-mm-dd
      *
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function newAction(Request $request, Listing $listing, $day)
     {
         $availability = new ListingAvailability();
         $availability->setListingId($listing->getId());
-        $availability->setDay(new DateTime($day));
-        $availability->setStatus(ListingAvailability::STATUS_AVAILABLE);
+        $availability->setDay(new \DateTime($day));
 
         $form = $this->createCreateForm($availability);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->get("cocorico.listing_availability.manager")->save($form->getData());
+            $this->get("cocorico.listing_availability.manager")->save(
+                $form->getData()
+            );
+
             $this->get('session')->getFlashBag()->add(
                 'success',
                 $this->get('translator')->trans('listing.availability.new.success', array(), 'cocorico_listing')
@@ -251,7 +248,7 @@ class ListingAvailabilityPriceController extends Controller
     /**
      * @param ListingAvailability $availability
      *
-     * @return Form|FormInterface
+     * @return \Symfony\Component\Form\Form|\Symfony\Component\Form\FormInterface
      */
     private function createCreateForm(ListingAvailability $availability)
     {

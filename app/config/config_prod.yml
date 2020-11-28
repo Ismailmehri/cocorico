@@ -57,5 +57,7 @@ monolog:
 
 
 swiftmailer:
-    spool:
-        type: memory
+#    delivery_address: me@example.com
+#    spool:
+#        type: file
+#        path: '%kernel.project_dir%/var/spool'

@@ -38,11 +38,9 @@
             </li>
         {% endif %}
 
-        {% if not timeUnitIsDay %}
-            <li class="pull-right">
-                {{ 'form.time_zone'|trans({}, 'cocorico_user') }}:
-                <strong>{{ user_timezone|timezone_name }}</strong>
-            </li>
-        {% endif %}
+        <li class="pull-right">
+            {{ 'form.time_zone'|trans({}, 'cocorico_user') }}:
+            <strong>{{ user_timezone|timezone_name }}</strong>
+        </li>
     </ul>
 </div>

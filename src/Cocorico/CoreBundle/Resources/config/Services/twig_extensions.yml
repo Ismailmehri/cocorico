@@ -44,6 +44,7 @@ services:
                 cocorico_booking_validated_moment: "%cocorico.booking.validated_moment%"
                 cocorico_booking_validated_delay: "%cocorico.booking.validated_delay%"
                 cocorico_booking_price_min: "%cocorico.booking_price_min%"
+                cocorico_booking_min_start_delay: "%cocorico.booking.min_start_delay%"
                 cocorico_booking_min_start_time_delay: "%cocorico.booking.min_start_time_delay%"
                 cocorico_vat: "%cocorico.vat%"
                 cocorico_include_vat: "%cocorico.include_vat%"
@@ -75,3 +76,13 @@ services:
             - "%kernel.bundles%"
         tags:
             - { name: twig.extension }
+
+    #Override trans filters.
+#    twig.extension.trans:
+#        class: Cocorico\CoreBundle\Twig\TranslationExtension
+#        arguments:
+#            - '@translator'
+#        calls:
+#            - [setCheckTranslation, ["%cocorico.check_translation%"]]
+#        tags:
+#             - { name: twig.extension }

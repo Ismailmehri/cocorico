@@ -18,7 +18,6 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -29,16 +28,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class RegistrationFormType extends AbstractType
 {
-    protected $timeUnitIsDay;
-
-    /**
-     * RegistrationFormType constructor.
-     * @param $timeUnit
-     */
-    public function __construct($timeUnit)
-    {
-        $this->timeUnitIsDay = ($timeUnit % 1440 == 0) ? true : false;
-    }
 
     /**
      * @param FormBuilderInterface $builder
@@ -91,7 +80,7 @@ class RegistrationFormType extends AbstractType
             )
             ->add(
                 'phone',
-                TelType::class,
+                TextType::class,
                 array(
                     'label' => 'form.user.phone',
                     'required' => false,
@@ -149,19 +138,15 @@ class RegistrationFormType extends AbstractType
                     'invalid_message' => 'fos_user.password.mismatch',
                     'required' => true,
                 )
+            )
+            ->add(
+                'timeZone',
+                TimezoneType::class,
+                array(
+                    'label' => 'form.time_zone',
+                    'required' => true,
+                )
             );
-
-        if (!$this->timeUnitIsDay) {
-            $builder
-                ->add(
-                    'timeZone',
-                    TimezoneType::class,
-                    array(
-                        'label' => 'form.time_zone',
-                        'required' => true,
-                    )
-                );
-        }
     }
 
     /**

@@ -25,15 +25,13 @@ class TwigTranslationExtensionCompilerPass implements CompilerPassInterface
         /**
          * Override Twig Translation extension
          */
-        if ($container->getParameter('cocorico.check_translation') === true) {
-            if ($container->hasDefinition('twig.extension.trans')) {
-                $definition = $container->getDefinition('twig.extension.trans');
-                $definition->setClass(TranslationExtension::class);
-                $definition->addMethodCall(
-                    'setCheckTranslation',
-                    array($container->getParameter('cocorico.check_translation'))
-                );
-            }
+        if ($container->hasDefinition('twig.extension.trans')) {
+            $definition = $container->getDefinition('twig.extension.trans');
+            $definition->setClass(TranslationExtension::class);
+            $definition->addMethodCall(
+                'setCheckTranslation',
+                array($container->getParameter('cocorico.check_translation'))
+            );
         }
     }
 }

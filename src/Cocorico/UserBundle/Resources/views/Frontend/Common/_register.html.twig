@@ -5,7 +5,7 @@
     {{ form_errors(form_registration) }}
 
     <div class="tab-holder">
-        <div class="column">
+	    <div class="column">
             <h3>{{ 'user.facebook.login.title'|trans }}</h3>
             <a href="#" onclick="fb_login();" class="btn-facebook">
                 <i class="icon-facebook"></i>
@@ -13,7 +13,7 @@
             </a>
 
             <div id="fb-root"></div>
-        </div>    
+        </div>
         <div class="column">
             <h3>{{ 'user.signup.title'|trans }}</h3>
 
@@ -210,18 +210,16 @@
                 </div>
             </div>
 
-            {% if not timeUnitIsDay %}
-                <div class="field-row validate-row">
-                    <div class="error-container">{{ form_errors(form_registration.timeZone) }}</div>
-                    <span class="label">{{ form_label(form_registration.timeZone) }}</span>
+            <div class="field-row validate-row">
+                <div class="error-container">{{ form_errors(form_registration.timeZone) }}</div>
+                <span class="label">{{ form_label(form_registration.timeZone) }}</span>
 
-                    <div class="field-holder">
-                        {{ form_widget(form_registration.timeZone, {
-                            'attr': {'class': "form-control no-arrow"}
-                        }) }}
-                    </div>
+                <div class="field-holder">
+                    {{ form_widget(form_registration.timeZone, {
+                        'attr': {'class': "form-control no-arrow"}
+                    }) }}
                 </div>
-            {% endif %}
+            </div>
 
             {# dont work when empty value #}
             <div class="field-row validate-row">
@@ -256,6 +254,8 @@
                 </div>
             </div>
         </div>
+		
+
     </div>
 </div>
 {{ form_rest(form_registration) }}

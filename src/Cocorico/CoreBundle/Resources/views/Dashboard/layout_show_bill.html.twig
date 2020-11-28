@@ -35,11 +35,7 @@
                                         {{ 'booking.reciept.title.booking_id'|trans }}
                                     {% endif %}:
                                 </strong>
-                                {% if isRefund is defined and isRefund is same as(true) %}
-                                    {{ booking.refundInvoiceNumber?: booking.id }}
-                                {% else %}
-                                    {{ booking.invoiceNumber?: booking.id }}
-                                {% endif %}
+                                {{ booking.id }}
                             </p>
                         {% endblock %}
 
@@ -93,12 +89,10 @@
                                 {{ booking.duration(endDayIncluded, timeUnit, timeUnitIsDay) | add_time_unit_text }}
                             </div>
 
-                            {% if not timeUnitIsDay %}
-                                <div>
-                                    <strong>{{ 'form.time_zone'|trans({}, 'cocorico_user') }} :</strong>
-                                    {{ user_timezone|timezone_name }}
-                                </div>
-                            {% endif %}
+                            <div>
+                                <strong>{{ 'form.time_zone'|trans({}, 'cocorico_user') }} :</strong>
+                                {{ user_timezone|timezone_name }}
+                            </div>
 
                             <br/>
                         {% endblock %}

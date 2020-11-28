@@ -59,13 +59,10 @@
                         </span>
                     </div>
                     <div class="booking-detail">
-                        {% if not timeUnitIsDay %}
-                            <div class="timezone">
-                                <strong>{{ 'form.time_zone'|trans({}, 'cocorico_user') }} :</strong>
-                                {{ user_timezone|timezone_name }}
-                            </div>
-                        {% endif %}
-
+                        <div class="timezone">
+                            <strong>{{ 'form.time_zone'|trans({}, 'cocorico_user') }} :</strong>
+                            {{ user_timezone|timezone_name }}
+                        </div>
                         <ul class="list-inline" id="booking-asker-date">
                             <li>
                                 {{ 'booking.show.start:'|trans }}
