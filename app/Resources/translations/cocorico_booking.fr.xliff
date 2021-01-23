@@ -235,7 +235,7 @@
       </trans-unit>
       <trans-unit id="c7de4f52f1bf3074e96c0f94b6fb806ad7c2e469" resname="booking.new.message.placeholder">
         <source>booking.new.message.placeholder</source>
-        <target>Rédiger votre message de demande à l'attention de Jobber</target>
+        <target>Rédiger votre message de demande à l'attention de prestataire</target>
       </trans-unit>
       <trans-unit id="1703c3a03d2cf45800ecb3b3f93e1a5b8bb6573f" resname="booking.new.options.success">
         <source>booking.new.options.success</source>
@@ -451,7 +451,7 @@
       </trans-unit>
       <trans-unit id="19051e5b1c199ce02aad0169b68504f605e4a22b" resname="entity.booking.status.payed">
         <source>entity.booking.status.payed</source>
-        <target>Payé</target>
+        <target>Réservation validée</target>
       </trans-unit>
       <trans-unit id="ac67710619d33808f397f828ec529d4478b533e1" resname="entity.booking.status.payment_refused">
         <source>entity.booking.status.payment_refused</source>
@@ -459,7 +459,7 @@
       </trans-unit>
       <trans-unit id="aa26cc6aa2b9905f8d3be1c2c377714f62638890" resname="entity.booking.status.refused">
         <source>entity.booking.status.refused</source>
-        <target>Refusé</target>
+        <target>Réservation refusée</target>
       </trans-unit>
       <trans-unit id="68af81ad015bd138bbb52a137e8a782c7136b7d3" resname="listing.form.tac">
         <source>listing.form.tac</source>

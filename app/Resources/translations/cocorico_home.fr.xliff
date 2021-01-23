@@ -17,34 +17,34 @@
       <trans-unit id="ac829dba1f97945e59fd87f2618384bfe8516497" resname="home.header.title">
         <source>home.header.title</source>
         <target><![CDATA[
-                <span class="thin-text jobber">Trouvez le <b>Jobber</b> idéal pour </br> tous les <b>services du quotidien  </b> </span>]]></target>
+                <span class="thin-text jobber">Trouvez <b>la robe</b> parfaite pour </br> pour tout type <b>d'évènement</b> </span>]]></target>
       </trans-unit>
       <trans-unit id="3af93b9b8cfe074ceff3fff27255261635f40424" resname="home.subinfo.desc1">
         <source>home.subinfo.desc1</source>
-        <target xml:space="preserve">Évaluer votre jobber pour informer les autres utilisateurs de la qualité de son travail.
+        <target xml:space="preserve">Évaluez la robe et le service pour informer les autres utilisateurs de la qualité de son travail.
             </target>
       </trans-unit>
       <trans-unit id="908e5b384bbeb42623be6a1743cf010dc3b48483" resname="home.subinfo.desc2">
         <source>home.subinfo.desc2</source>
-        <target xml:space="preserve">Des jobeurs compétents et proches de chez vous vous proposent leurs services
+        <target xml:space="preserve">Notre catalogue propose plusieurs robes de mariée, cérémonie et soirée.
             </target>
       </trans-unit>
       <trans-unit id="ebab0f46f60ef21c52a8bf36f8101816c5705927" resname="home.subinfo.desc3">
         <source>home.subinfo.desc3</source>
-        <target xml:space="preserve">Votre jobbeur vous rend service au prix et à la date convenus.
+        <target xml:space="preserve">Vous pouvez réserver sur notre plateforme votre robe à la date souhaitée .
             </target>
       </trans-unit>
       <trans-unit id="4c15d8bf2bdf8150e45e9f30b559ea8565a47042" resname="home.subinfo.title1">
         <source>home.subinfo.title1</source>
-        <target>Évaluer votre jobber </target>
+        <target>Souriez, c'est fait !</target>
       </trans-unit>
       <trans-unit id="28172413ec09c98bffa9f072e9bd873932e70145" resname="home.subinfo.title2">
         <source>home.subinfo.title2</source>
-        <target>Choisissez votre jobbeur</target>
+        <target>Choisissez votre robe</target>
       </trans-unit>
       <trans-unit id="34f93326a2cd533fae3b8bd53d9e3315059964da" resname="home.subinfo.title3">
         <source>home.subinfo.title3</source>
-        <target>Souriez, c'est fait !</target>
+        <target>Réservez une date</target>
       </trans-unit>
     </body>
   </file>

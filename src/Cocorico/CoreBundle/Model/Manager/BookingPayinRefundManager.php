@@ -115,7 +115,7 @@ class BookingPayinRefundManager extends BaseManager
             }
 
             //If time before checkin is less than the limit then the refund is minimum
-            if ($booking->getTimeBeforeStart($this->timeZone) < $rules["time_before_start"]) {
+            if ($booking->getTimeBeforeStart($booking->getUser()->getTimeZone()) < $rules["time_before_start"]) {
                 $refundPercentage = $rules["refund_min"];
             } else {
                 $refundPercentage = $rules["refund_max"];

@@ -775,7 +775,7 @@
       </trans-unit>
       <trans-unit id="9afa0d417148b9d4c74a5657724593e4c5578d4f" resname="listing_price.min {{ min_price }}">
         <source>listing_price.min {{ min_price }}</source>
-        <target>Le prix doit être supérieur ou égale à {{ min_price }}€</target>
+        <target>Le prix doit être supérieur ou égale à {{ min_price }}TND</target>
       </trans-unit>
       <trans-unit id="793890ef1a5e2a969f867ff69e3a84f5cf01751b" resname="listing_search.form.categories">
         <source>listing_search.form.categories</source>

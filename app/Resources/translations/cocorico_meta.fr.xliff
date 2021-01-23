@@ -16,7 +16,7 @@
       </trans-unit>
       <trans-unit id="17cb48026a0a70249cfb5dc5fc89888b4272e075" resname="booking.payment.meta_desc">
         <source>booking.payment.meta_desc</source>
-        <target state="new">Réserver un jobber</target>
+        <target state="new">Réserver</target>
       </trans-unit>
       <trans-unit id="c471d7138d12a8f617ec4edfb6f49ccccc5a9254" resname="booking.payment.meta_title">
         <source>booking.payment.meta_title</source>
@@ -64,11 +64,11 @@
       </trans-unit>
       <trans-unit id="bcc8420d0ad711f898edbf7ad82116ef5a1e45e6" resname="user.show.meta_desc">
         <source>user.show.meta_desc</source>
-        <target>Le jobber</target>
+        <target>Le prestataire</target>
       </trans-unit>
       <trans-unit id="5f6e3b950fe53c98fa64b5bc47a5d6cfde82c719" resname="user.show.meta_title">
         <source>user.show.meta_title</source>
-        <target>Jobber</target>
+        <target>Le prestataire</target>
       </trans-unit>
     </body>
   </file>

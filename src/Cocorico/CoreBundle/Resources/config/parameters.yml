@@ -1,11 +1,11 @@
 parameters:
     #### Environment independent parameters. Same values in dev, staging, prod environments  ####
     #Site general info
-    cocorico.site_name: Jobber - site de jobbing et de services entre particuliers
+    cocorico.site_name: MyWedding - Location de robes entre particuliers
     cocorico.phone: +216 80 216 216
     cocorico.address: Tunis, Tunisie
-    cocorico.short_description: 'Trouvez le prestataire idéal pour tous les services du quotidien : Bricolage, Déménagement, Nettoyage, électricien à domicile, Coach prive, Massage a domicile, Cours particuliers.'
-    cocorico.seo_words: électricien à domicile, coach prive tunisie, massage a domicile tunis, photographe mariage, cours particuliers, femme de menage tunisie prix, esthéticienne à domicile
+    cocorico.short_description: 'Le site de référence de location de robes en Tunisie, Louez votre robe de mariée, robe de fiancaille, ou une robe de soirée. Que vous soyez à Tunis, Hammaet , Sousse, Monastir ou Mahdia, Vous pouvez réserver en ligne votre robe à la date souhaitée !'
+    cocorico.seo_words: location robe,location robe de mariée,location robe de soirée,location robe mariage,robe de mariée princesse,robe de mariée sirène,robe de mariée courte,robe de mariée simple,robe de mariée 2020 2021,robe de mariée femme ronde,robe de mariée princesse luxe,robe de mariée prix
     cocorico.contact_mail: contact@jobber.tn
     #To obfuscate see http://wbwip.com/wbw/emailencoder.html
     cocorico.contact_mail_obfuscated: "contact@jobber.tn"
@@ -40,14 +40,14 @@ parameters:
     cocorico.vat: 0.17
 
     #Does registration require email confirmation
-    cocorico.registration_confirmation: false
+    cocorico.registration_confirmation: true
 
     #Fees in %
     cocorico.fee_as_asker: 0.0
     cocorico.fee_as_offerer: 0.0
 
     #Time unit in minute (1440 or 60)
-    cocorico.time_unit: 60
+    cocorico.time_unit: 1440
 
     #Default users timezone
     cocorico.time_zone: 'Europe/Paris'
@@ -71,7 +71,7 @@ parameters:
 
     #Used for display calendar :
     #Unavailability is for all day or overlaps two consecutives days.
-    cocorico.time_unit_allday: false  #boolean
+    cocorico.time_unit_allday: true  #boolean
 
     #Max search, booking time unit number.
     #Min 1. Max value of times max depends on time unit: 24 if time unit is hour. Not needed if time unit is day.
@@ -87,7 +87,7 @@ parameters:
     cocorico.review_max_per_page: 10
 
     #Is new listing published by default (0 or 1)
-    cocorico.listing_new_is_published: 0
+    cocorico.listing_new_is_published: 1
 
     #Countries : for France and UK: - FR\n- GB. For all countries set it to []
     cocorico.listing_countries: [TN]
@@ -102,9 +102,9 @@ parameters:
     cocorico.listing_price_precision: 2
 
     #Min listing price in euro cents
-    cocorico.listing_price_min: 100
+    cocorico.listing_price_min: 1000
     #Max listing price in euro cents
-    cocorico.listing_price_max: 10000
+    cocorico.listing_price_max: 500000
 
     #Add marker on listing show page if true or zone if false
     cocorico.listing_map_display_marker: false
@@ -136,13 +136,13 @@ parameters:
 
     #Does a booking request include the end day in the booking duration
     #Does the end day is included in search.
-    cocorico.booking.end_day_included: true
+    cocorico.booking.end_day_included: false
 
     #Minimum days between booking request and booking starting day
     #Or Number of days to add to the current date to consider start date as valid
     #Ex : 0 -> the booking can be requested and start the current day
     #     1 -> the booking can be requested at least one day before it start.
-    cocorico.booking.min_start_delay: 0
+    cocorico.booking.min_start_delay: 1
 
     #Minimum minutes between booking request and booking starting time
     #Or Number of minutes to add to the current time to consider start time as valid
@@ -234,7 +234,7 @@ parameters:
     #Max/Min images by user
     cocorico.user_img_min: 1
     cocorico.user_img_max: 6
-    cocorico.user_img_max_upload_size: 12 #MB
+    cocorico.user_img_max_upload_size: 20 #MB
 
     #User images sizes (px)
     cocorico.user_img_xsmall_w: 60

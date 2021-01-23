@@ -1571,7 +1571,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > th.active:hover,
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr.active:hover > th {
-    background-color: #e8e8e8;
+    background-color: #fbf4f1;
 }
 
 .table > thead > tr > td.success,
@@ -2198,8 +2198,8 @@ fieldset[disabled] .btn {
 
 .btn-default {
     color: #ffffff;
-    background-color: #0bca00;
-    border-color: #0bca00;
+    background-color: #f1a29f;
+    border-color: #f1a29f;
 }
 
 .btn-default:hover,
@@ -2207,9 +2207,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-    color: #0bca00;
+    color: #f1a29f;
     background-color: #fff;
-    border-color: #0bca00;
+    border-color: #f1a29f;
 }
 
 .btn-default:active,
@@ -2243,9 +2243,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    color: #2f91fa;
+    color: #f1a29f;
     background-color: #fff;
-    border: 1px solid #2f91fa;
+    border: 1px solid #f1a29f;
 }
 
 .btn-primary:hover,
@@ -2254,8 +2254,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #2f91fa;
-    border: 1px solid #2f91fa;
+    background-color: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .btn-primary:active,
@@ -3791,8 +3791,8 @@ input[type="button"].btn-block {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
     color: #000000;
-    background-color: #e8e8e8;
-    border-color: #e8e8e8;
+    background-color: #fbf4f1;
+    border-color: #fbf4f1;
 }
 
 .pagination > .active > a,
@@ -3803,7 +3803,7 @@ input[type="button"].btn-block {
 .pagination > .active > span:focus {
     z-index: 2;
     color: #414042;
-    background-color: #e8e8e8;
+    background-color: #fbf4f1;
     border-color: #e3e3e3;
     cursor: default;
 }
@@ -3879,7 +3879,7 @@ input[type="button"].btn-block {
 .pager li > a:hover,
 .pager li > a:focus {
     text-decoration: none;
-    background-color: #e8e8e8;
+    background-color: #fbf4f1;
 }
 
 .pager .next > a,
@@ -4952,7 +4952,7 @@ input[type="button"].btn-block {
 
 /* '' */
 html {
-    background: #333435;
+    background: #333435 ;
 }
 
 body {
@@ -5191,7 +5191,7 @@ span.btn:focus {
 .home-page .form-category {
     display: inline-block;
 /*     border-radius: 4px 4px 0 0;
-   border: 1px solid #e8e8e8;  */ 
+   border: 1px solid #fbf4f1;  */ 
     background-color: rgba(246, 246, 246, 0.0);
     padding: 14px 20px 8px;
     margin-block-end: 70px;
@@ -5491,21 +5491,21 @@ span.btn:focus {
     position: relative;
     color: #fff;
     text-transform: uppercase;
-    background: #0bca00;
-    border: 1px solid #0bca00;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .jobber {
-    background: rgba(253, 107, 28, 0.5);
+    background: rgba(242, 163, 160, 0.5);
 }
 
 .form-category input.btn-default:hover,
 .form-category input.btn-default:focus,
 .form-category input.btn-default:active,
 .form-category input.btn-default.active {
-    color: #0bca00;
+    color: #f1a29f;
     background: #fff;
-    border: 1px solid #0bca00;
+    border: 1px solid #f1a29f;
 }
 
 .form-category .col {
@@ -5612,7 +5612,7 @@ span.btn:focus {
 
 .form-category .form-holder {
     position: relative;
-    background: #e8e8e8;
+    background: #fbf4f1;
     border-radius: 4px;
     margin: 0 0 40px;
     padding: 15px 19px 15px 19px;
@@ -6012,7 +6012,7 @@ span.btn:focus {
 /* bottom-container */
 .bottom-container {
     color: #ffffff;
-    background: #333435;
+    background: #333435 ;
 }
 
 /* aside-footer */
@@ -6280,7 +6280,7 @@ span.btn:focus {
     z-index: 2;
     width: 46px;
     height: 46px;
-    color: #e8e8e8;
+    color: #fbf4f1;
     position: absolute;
     text-align: center;
     border-radius: 100%;
@@ -6293,7 +6293,7 @@ span.btn:focus {
 
 .listing-post .favourit:hover {
     text-decoration: none;
-    background: #c53f4e;
+    background: #f2a3a0;
 }
 
 .listing-post .area {
@@ -6370,14 +6370,14 @@ span.btn:focus {
     text-transform: none;
     font-size: 14px;
     line-height: 18px;
-    border-color: #2f91fa;
+    border-color: #f1a29f;
     background: #fff;
 }
 
 .listing-post .info-btns .btn:hover {
     color: #fff;
-    border-color: #2f91fa;
-    background: #2f91fa;
+    border-color: #f1a29f;
+    background: #f1a29f;
 }
 
 .listing-post .info-btns .btn:before {
@@ -6651,7 +6651,7 @@ span.btn:focus {
 
 .pagination > li > a:focus:hover,
 .pagination > li > span:focus:hover {
-    background: #e8e8e8;
+    background: #fbf4f1;
 }
 
 /* main content styles */
@@ -6751,7 +6751,7 @@ span.btn:focus {
     overflow: hidden;
     border-radius: 5px;
     position: relative;
-    background: #e8e8e8;
+    background: #fbfbfb;
     border: #eaebec solid 1px;
 }
 
@@ -7117,13 +7117,13 @@ span.btn:focus {
     font-weight: 600;
     padding: 7px 14px;
     text-transform: none;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .reservation .btn-default:hover {
     background: #fff;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 .reservation .title {
@@ -7284,13 +7284,13 @@ span.btn:focus {
     display: block;
     padding: 4px 34px 1px;
     text-transform: none;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .similar-ads .btn-default:hover {
     background: #fff;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 /* tooltip-button */
@@ -7401,7 +7401,7 @@ span.btn:focus {
 .profile-detail .head {
     margin: 0 0 20px;
     padding: 0 0 34px;
-    border-bottom: #e8e8e8 solid 1px;
+    border-bottom: #fbf4f1 solid 1px;
 }
 
 .profile-detail .head address {
@@ -8720,7 +8720,7 @@ label {
 .nav-tabs > li > a {
     color: #ffffff;
     text-decoration: none;
-    background: #000;
+    background: #f2a3a0;
     padding: 13px 15px 10px;
 }
 
@@ -9899,7 +9899,7 @@ h1.listing-title a {
 }
 
 .schedule-table .unavailable {
-    background: #e8e8e8;
+    background: #fbf4f1;
 }
 
 .schedule-table > tbody > tr > td {
@@ -9935,7 +9935,7 @@ h1.listing-title a {
 .table-area .fc-day-header {
     text-align: center;
     padding: 0 !important;
-    background: #e8e8e8;
+    background: #fbf4f1;
     font-weight: 400;
     border: #f9f9f9 solid;
     border-width: 1px;
@@ -10301,7 +10301,7 @@ h1.listing-title a {
     height: 30px;
     border-radius: 30px;
     background: #ffffff;
-    border: #2f91fa solid 2px;
+    border: #f1a29f solid 2px;
 }
 
 .radio-holder .jcf-radio {
@@ -10321,7 +10321,7 @@ h1.listing-title a {
 
 .radio-holder .jcf-radio.jcf-checked {
     opacity: 1;
-    background: #2f91fa;
+    background: #f1a29f;
 }
 
 .radio-holder .jcf-radio.jcf-checked span {
@@ -10639,14 +10639,14 @@ h1.listing-title a {
     font-size: 14px;
     line-height: 17px;
     text-transform: none;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
     color: #FFF;
 }
 
 .form-area button[type=submit]:hover {
     background: #FFF;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 .form-area .form-block {
@@ -10833,13 +10833,13 @@ h1.listing-title a {
 .form-area .file-selection + .btn-block button[type="submit"] {
     margin: 0;
     color: #fff;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 
 .form-area .file-selection + .btn-block button[type="submit"]:hover {
-    color: #F4661B;
+    color: #f1a29f;
     background: #FFF;
 }
 
@@ -10999,13 +10999,13 @@ h1.listing-title a {
 .form-area .block2 .field-row.address + .btn-block button[type="submit"] {
     margin: 0;
     color: #fff;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 
 .form-area .block2 .field-row.address + .btn-block button[type="submit"]:hover {
-    color: #F4661B;
+    color: #f1a29f;
     background: #FFF;
 }
 
@@ -11064,14 +11064,14 @@ h1.listing-title a {
 
 .form-area .columns-holder + .btn-block button[type=submit] {
     margin: 0;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
     color: #fff;
 }
 
 .form-area .columns-holder + .btn-block button[type=submit]:hover {
     background: #fff;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 .form-area .contact-info:before,
@@ -11186,12 +11186,12 @@ h1.listing-title a {
     min-width: 87px;
     margin: 0 0 0 10px;
     color: #fff;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .form-area .about-info .language button[type="submit"]:hover {
-    color: #F4661B;
+    color: #f1a29f;
     background: #FFF;
 }
 
@@ -11539,12 +11539,12 @@ h1.listing-title a {
 .form-area #contact-info .btn-block button[type=submit] {
     margin: 0;
     color: #fff;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .form-area #contact-info .btn-block button[type=submit]:hover {
-    color: #F4661B;
+    color: #f1a29f;
     background: #FFF;
 }
 
@@ -12460,13 +12460,13 @@ h1.listing-title a {
     display: block;
     text-align: center;
     text-transform: none;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .postarea .posts-holder .footer .btn-default:hover {
     background: #fff;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 .postarea .posts-holder .footer .btn-default + .btn {
@@ -13145,20 +13145,20 @@ h1.listing-title a {
 }
 
 .form-ad-detail .btn-primary:hover {
-    background: #2f91fa;
+    background: #f1a29f;
     color: #fff;
 }
 
 .form-ad-detail .btn-default {
     padding: 6px 30px;
     text-transform: none;
-    background: #F4661B;
-    border: 1px solid #F4661B;
+    background: #f1a29f;
+    border: 1px solid #f1a29f;
 }
 
 .form-ad-detail .btn-default:hover {
     background: #fff;
-    color: #F4661B;
+    color: #f1a29f;
 }
 
 /* messaging blog */
@@ -13480,7 +13480,7 @@ h1.listing-title a {
 .modal .modal-content {
     padding: 19px 19px;
     border-radius: 5px;
-    border: #e8e8e8 solid 1px;
+    border: #fbf4f1 solid 1px;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -14476,7 +14476,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     width: 14px;
     height: 14px;
     overflow: hidden;
-    background: #333435;
+    background: #333435 ;
 }
 
 .jcf-scrollbar-horizontal .jcf-scrollbar-inc {
@@ -16220,7 +16220,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     .tabset-holder .opener .icon-down-open-mini {
 		float: right;
 		width: 40px;
-		background: #F4661B;
+		background: #f1a29f;
 		border-radius: 5px;
 		border-left: 10px solid #fff;
 		color: #fff;
@@ -16597,12 +16597,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     .form-area button[type="submit"] {
         margin: 0;
         color: #fff;
-        background: #F4661B;
-        border: 1px solid #F4661B;
+        background: #f1a29f;
+        border: 1px solid #f1a29f;
     }
     
     .form-area button[type="submit"]:hover {
-        color: #F4661B;
+        color: #f1a29f;
         background: #FFF;
     }
 
