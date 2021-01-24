@@ -103,6 +103,6 @@ class PriceType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'price';
+        return 'price'; 
     }
 }

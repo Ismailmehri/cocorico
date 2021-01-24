@@ -62,16 +62,11 @@ Voici le récapitulatif de la réservation :
         - Durée: %booking_duration%
         - Fuseau Horaire: %user_timezone%
 
-Un virement en votre faveur de %booking_amount_offerer% sera effectué à la date suivante : %offerer_wiretransfer_date%
-
-Si vous ne l’avez pas déjà fait, pensez à renseigner votre IBAN pour recevoir vos fonds en cliquant sur ce <a href="%profile_payment_info_url%">lien</a>.
-
 La politique d’annulation que vous avez sélectionnée est la suivante :
 
 %cancellation_policy_title%
 %cancellation_policy_description%
-
-Vous pouvez contacter %asker_firstname% %asker_lastname% sur cette <a href="%booking_request_url%">page</a>.]]></target>
+]]></target>
       </trans-unit>
       <trans-unit id="ff356fd5a389a98a5610a0ca6949dd72dbc3c96f" resname="booking_accepted_offerer.email.subject">
         <source>booking_accepted_offerer.email.subject</source>
@@ -169,9 +164,7 @@ La politique d’annulation de cette réservation est la suivante :
 %cancellation_policy_title%
 %cancellation_policy_description%
 
-En accord avec ces conditions d’annulation, le montant de votre remboursement est de %asker_cancellation_amount%.
-
-Pour recevoir vos fonds vous devez renseigner vos coordonnées bancaires en cliquant sur ce <a href="%profile_payment_info_url%">lien</a>.]]></target>
+]]></target>
       </trans-unit>
       <trans-unit id="640ada386bdba3f78c2270c39fd0de60cbe237e4" resname="canceled_by_asker_asker.email.subject">
         <source>canceled_by_asker_asker.email.subject</source>
@@ -193,8 +186,7 @@ La politique d’annulation que vous avez sélectionnée est la suivante :
 
 %cancellation_policy_title%
 %cancellation_policy_description%
-
-En accord avec les conditions d’annulation que vous avez choisi, le montant qui vous est dû est de %offerer_cancellation_amount%. Si une somme vous est due votre virement sera exécuté sous 4 jours ouvrés.]]></target>
+]]></target>
       </trans-unit>
       <trans-unit id="0234973eefac2840f88abdd89192e300e63ee72b" resname="canceled_by_asker_offerer.email.subject">
         <source>canceled_by_asker_offerer.email.subject</source>
