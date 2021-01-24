@@ -184,12 +184,12 @@ parameters:
         flexible:
             #in seconds
             time_before_start: 86400
-            refund_min: 0.5
-            refund_max: 1
+            refund_min: 0
+            refund_max: 0
         strict:
             time_before_start: 86400
             refund_min: 0
-            refund_max: 0.5
+            refund_max: 0
 
     #ListingOptionBundle:
     #ListingOption: none or Cocorico\ListingOptionBundle\Entity\ListingOption (without quotes!)

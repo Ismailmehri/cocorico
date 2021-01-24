@@ -171,8 +171,6 @@ La politique d’annulation de cette réservation est la suivante :
 
 En accord avec ces conditions d’annulation, le montant de votre remboursement est de %asker_cancellation_amount%.
 
-Si une somme vous est due votre virement sera exécuté sous 4 jours ouvrés.
-
 Pour recevoir vos fonds vous devez renseigner vos coordonnées bancaires en cliquant sur ce <a href="%profile_payment_info_url%">lien</a>.]]></target>
       </trans-unit>
       <trans-unit id="640ada386bdba3f78c2270c39fd0de60cbe237e4" resname="canceled_by_asker_asker.email.subject">
