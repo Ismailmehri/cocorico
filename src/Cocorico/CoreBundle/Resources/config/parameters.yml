@@ -6,11 +6,11 @@ parameters:
     cocorico.address: Tunis, Tunisie
     cocorico.short_description: 'Le site de référence de location de robes en Tunisie, Louez votre robe de mariée, robe de fiancaille, ou une robe de soirée. Que vous soyez à Tunis, Hammaet , Sousse, Monastir ou Mahdia, Vous pouvez réserver en ligne votre robe à la date souhaitée !'
     cocorico.seo_words: location robe,location robe de mariée,location robe de soirée,location robe mariage,robe de mariée princesse,robe de mariée sirène,robe de mariée courte,robe de mariée simple,robe de mariée 2020 2021,robe de mariée femme ronde,robe de mariée princesse luxe,robe de mariée prix
-    cocorico.contact_mail: contact@jobber.tn
+    cocorico.contact_mail: contact@mywedding.tn
     #To obfuscate see http://wbwip.com/wbw/emailencoder.html
-    cocorico.contact_mail_obfuscated: "contact@jobber.tn"
-    cocorico.from_email: noreply@jobber.tn
-    cocorico.webmaster_email: error@jobber.tn
+    cocorico.contact_mail_obfuscated: "&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#109;&#121;&#119;&#101;&#100;&#100;&#105;&#110;&#103;&#046;&#116;&#110;"
+    cocorico.from_email: noreply@mywedding.tn
+    cocorico.webmaster_email: noreply@mywedding.tn
     cocorico.vat_number: TN
     cocorico.home_rss_feed: 'http://jobber.tn/fr/feed/'
 

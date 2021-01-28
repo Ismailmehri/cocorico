@@ -71,12 +71,12 @@
                 geocoding: JSON.stringify(result)
             };
 
-            $.ajax({
-                type: 'POST',
-                url: urlGeocoding,
-                data: data,
-                success: geocodeNextPlace(data, type)
-            });
+            // $.ajax({
+            //    type: 'POST',
+            //    url: urlGeocoding,
+            //    data: data,
+            //    success: geocodeNextPlace(data, type)
+            //});
         }
     });
 </script>
