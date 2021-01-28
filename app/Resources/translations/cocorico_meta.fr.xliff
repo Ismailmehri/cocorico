@@ -11,7 +11,7 @@
         <target>booking.new.meta_desc</target>
       </trans-unit>
       <trans-unit id="14b6b218dbec12074bce69744dee7aa0ddf72dc0" resname="booking.new.meta_title">
-        <source>Réserver un jobber</source>
+        <source>Réserver</source>
         <target>Réserver</target>
       </trans-unit>
       <trans-unit id="17cb48026a0a70249cfb5dc5fc89888b4272e075" resname="booking.payment.meta_desc">

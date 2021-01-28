@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="b6efbc728e20a592f93cc71db4d9e5cfe7f9e414" resname="Offerer">
         <source>Offerer</source>
-        <target>Jobber</target>
+        <target>Le prestataire</target>
       </trans-unit>
       <trans-unit id="bb11a8e3f8712e36e7cd9d1c615a4e3dbb03336a" resname="Rules">
         <source>Rules</source>
