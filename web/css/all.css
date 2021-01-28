@@ -9637,7 +9637,7 @@ h1.listing-title a {
 .gallery-slider .slide img,
 .gallery-slider .vertical-slide img {
     width: 100% !important;
-    height: auto;
+    height: auto !important;
     vertical-align: top;
 }
 

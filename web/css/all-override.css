@@ -5,7 +5,7 @@
 
 .listing-post .active, .tabset-holder .active .icon-heart {
     text-decoration: none;
-    background: #c53f4e;
+    background: #797979 !important;
 }
 
 .listing-area, .listing-holder {
@@ -2318,11 +2318,13 @@ ul.collection {
 .slider-secondary .slider-secondary-actions a.slider-prev {
     background-image: url(../images/arrow-left.png);
     left: -30px;
+    top: 33%;
 }
 
 .slider-secondary .slider-secondary-actions a.slider-next {
     background-image: url(../images/arrow-right.png);
-    right: -13px;
+    right: 0px;
+    top: 33%;
 }
 
 .slider-secondary .slider-secondary-paging {
@@ -2380,8 +2382,8 @@ ul.collection {
 }
 
 .slider-secondary .slider-secondary-actions a {
-    width: 15px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
 
 .tips-section .slider-secondary .slider-secondary-paging a.selected {
@@ -2415,7 +2417,7 @@ ul.collection {
 }
 
 .slider-secondary .slider-secondary-actions a.slider-prev {
-    left: -15px;
+    left: -5px;
 }
 
 @media screen and (max-width: 767px) {

@@ -348,7 +348,7 @@
 
                                     {% if listing_user.images|length %}
                                         {% for image in listing_user.images %}
-                                            <div class="slide">
+                                            <div class="slide ">
                                                 <img src="{{ (UserImageConstants.IMAGE_FOLDER ~ image.name) | imagine_filter('user_contact') }}"
                                                      alt="{{ listing_user.name }}"/>
                                             </div>
